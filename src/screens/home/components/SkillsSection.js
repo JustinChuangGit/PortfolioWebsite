@@ -16,9 +16,9 @@ const SkillsSection = () => {
   };
 
   const initialSkills = [
-    { id: 'mechanical', name: 'Mechanical', color: mechanical_background },
-    { id: 'electrical', name: 'Electrical', color: electrical_background },
-    { id: 'software', name: 'Software', color: software_background },
+    { id: 'mechanical', name: 'Mechanical Engineering Skills', color: mechanical_background },
+    { id: 'electrical', name: 'Electrical Engineering Skills', color: electrical_background },
+    { id: 'software', name: 'Software Engineering Skills', color: software_background },
   ];
 
   const [skills, setSkills] = useState(initialSkills);
