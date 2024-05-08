@@ -1,0 +1,62 @@
+:root {
+    --border-radius-unclicked: 20px;
+    --border-radius-clicked: 0px;
+}
+  
+.skill-box {
+    cursor: 'pointer';
+    /* transition: border-bottom-left-radius 0.3s ease, border-bottom-right-radius 0.5s ease, height 0.5s ease; Add transition for height */
+    border-top-Right-Radius: var(--border-radius-unclicked);
+    border-top-left-radius: var(--border-radius-unclicked);
+
+}
+
+
+
+.skill-box.not-selected {
+    border-bottom-left-radius: var(--border-radius-unclicked);
+    border-bottom-right-radius: var(--border-radius-unclicked);
+    transition: border-bottom-left-radius 0.3s ease, border-bottom-right-radius 0.5s ease, 0.5s;
+  }
+
+  .skill-box.selected {
+    border-bottom-left-radius: var(--border-radius-clicked);
+    border-bottom-right-radius: var(--border-radius-clicked);
+    transition: 
+      border-bottom-left-radius 0.3s ease 0.5s, /* 0.2s delay added here */
+      border-bottom-right-radius 0.5s ease 0.5s, /* 0.2s delay added here */
+      height 0.5s ease; /* Ensure this does not have a delay if not needed */
+    height: 105%;
+    animation: growFromTopDown 0.5s ease;
+  }
+  
+
+@keyframes growFromTopDown {
+  0% {
+    height: 0; /* Start with height of 0 */
+  }
+  100% {
+    height: 100%; /* Expand to full height */
+  }
+}
+
+.skill-description {
+  overflow: hidden; /* Hide overflow */
+  border-bottom-left-radius: var(--border-radius-unclicked);
+  border-bottom-right-radius: var(--border-radius-unclicked);
+}
+/* 
+@media (min-width: 768px) {
+  .mechanical-description {
+    border-top-right-radius: var(--border-radius-clicked);
+  }
+
+  .electrical-description {
+    border-top-right-radius: var(--border-radius-unclicked);
+    border-top-left-radius: var(--border-radius-unclicked);
+  }
+
+  .software-description {
+    border-top-left-radius: var(--border-radius-unclicked);
+  }
+} */
