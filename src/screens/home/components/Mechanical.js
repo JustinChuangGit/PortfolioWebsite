@@ -32,9 +32,27 @@ const Mechanical = () => {
       }}
       style={{ backgroundColor: mechanical_background }}
     >
-      <div className='p-5 col-12'>
-        <h3>Mechanical Engineering</h3>
-        <p>Details about mechanical skills, projects, and experiences.</p>
+      <div className='p-5 pt-4 col-12'>
+        <h3>Mechanical Engineering Skills</h3>
+        <p>From a young age, I was immersed in the world of hands-on construction and engineering, thanks to my stepdad's career as a contractor. My early years were spent constructing wooden structures, which sparked a lifelong passion for building and mechanics. By the age of twelve, I was already dismantling and rebuilding small engines, from line trimmers to chainsaws.</p>
+        <p>This mechanical curiosity escalated when I acquired a dirt bike in high school. After experiencing a complete engine failure, I seized the opportunity to deepen my understanding of motorcycle engines through a meticulous rebuild. This hands-on experience was invaluable, laying a solid foundation for my mechanical skills.</p>
+        <p>My first internship was a turning point, introducing me to CAD technology. I quickly adapted, teaching myself SolidWorks and transforming abstract ideas into tangible models. Over the past four years, I've developed a robust skill set in CAD, covering Simulation, Motion Studies, Surfaces, and CAM, allowing me to expertly navigate from concept to execution. </p>
+
+        <h4>CAD Software Experience</h4>
+          <ul>
+            <li>SolidWorks</li>
+            <li>AutoCAD</li>
+            <li>Fusion 360</li>
+            <li>OnShape</li>
+          </ul>
+        
+        <h4>Certifications</h4>
+          <ul>
+            <li>SolidWorks Professional (CSWP) - Surfacing</li>
+            <li>SolidWorks Associate (CSWA) - Mechanical Design</li>
+            <li>SolidWorks Associate (CSWA) - Simulation</li>
+            <li>SolidWorks Associate (CSWA) - Additive Manufacturing</li>
+          </ul>
       </div>
     </motion.div>
   );
