@@ -30,8 +30,47 @@ const Software = () => {
       style={{ backgroundColor: software_background }}
     >
         <div className='p-5 col-12'>
-            <h3>Software Development</h3>
-            <p>Details about programming languages, software projects, and more.</p>
+            <p>I began my journey into programming during my first year of undergrad, where I was introduced to Java. My interest in software took a significant leap during my first internship, which required me to program an Arduino for a data collection device I was developing. This experience led me to delve into embedded programming, exploring peripherals, memory management, and more, using C/C++ on embedded devices.</p>
+            <p>Eager to expand my software skills, I undertook a challenging project at work to develop a web app for processing accelerometer data. I taught myself web app development, focusing on integrating a backend system with an engaging user interface. This newfound knowledge paved the way for me to explore mobile app development.</p>
+            <p>Throughout my university career, I extensively used MATLAB for a variety of data processing and visualization tasks. My projects ranged from implementing particle filters and Extended Kalman Filter SLAM algorithms to conducting sophisticated audio and image processing. Each challenge not only sharpened my technical skills but also deepened my passion for software engineering.</p>
+        
+            <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12 d-flex align-items-center justify-content-center">
+                    <div>
+                        <h4>Languages</h4>
+                        <ul >
+                            <li>Python</li>
+                            <li>C/C++</li>
+                            <li>Assembly</li>
+                            <li>JavaScript</li>
+                            <li>Dart</li>
+                            <li>Matlab</li>
+                            <li>SQL</li>
+                            <li>Java</li>
+                            <li>HTML/CSS</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 d-flex align-items-center justify-content-center">
+                    <div>
+                        <h4>Frameworks/Tools</h4>
+                        <ul>
+                            <li>Flutter</li>
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>Flask</li>
+                            <li>Bootstrap</li>
+                            <li>Tensorflow</li>
+                            <li>Scikit-Learn</li>
+                            <li>More...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         </div>
     </motion.div>
   );
