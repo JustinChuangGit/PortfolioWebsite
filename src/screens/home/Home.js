@@ -3,6 +3,7 @@
 import React from 'react';
 import Jumbotron from './components/Jumotron';
 import SkillsSection from './components/SkillsSection';
+import ProjectSection from './components/ProjectSection';
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
 
       <Jumbotron />
       <SkillsSection />
+      <ProjectSection />  
      
 
 

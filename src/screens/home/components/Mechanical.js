@@ -38,31 +38,45 @@ const Mechanical = () => {
         <p>My first internship was a turning point, introducing me to CAD technology. I quickly adapted, teaching myself SolidWorks and transforming abstract ideas into tangible models. Over the past four years, I've developed a robust skill set in CAD, Simulation, Motion Studies, Surfaces, 3D printing, and CAM, allowing me to expertly navigate from concept to execution. </p>
 
         <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-12 d-flex align-items-center justify-content-center">
-                <div>
-                    <h4>CAD Software Experience</h4>
-                    <ul>
-                        <li>SolidWorks</li>
-                        <li>AutoCAD</li>
-                        <li>Fusion 360</li>
-                        <li>OnShape</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6 col-12 d-flex align-items-center justify-content-center">
-                <div>
-                    <h4>Certifications</h4>
-                    <ul>
-                        <li>SolidWorks Professional (CSWP) - Surfacing</li>
-                        <li>SolidWorks Associate (CSWA) - Mechanical Design</li>
-                        <li>SolidWorks Associate (CSWA) - Simulation</li>
-                        <li>SolidWorks Associate (CSWA) - Additive Manufacturing</li>
-                    </ul>
-                </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-12 d-flex justify-content-center align-items-start">
+            <div>
+                <h4>CAD Software Experience</h4>
+                <ul>
+                    <li>SolidWorks</li>
+                    <li>AutoCAD</li>
+                    <li>Fusion 360</li>
+                    <li>OnShape</li>
+                </ul>
             </div>
         </div>
+        <div class="col-lg-4 col-md-6 col-12 d-flex justify-content-center align-items-start">
+            <div>
+                <h4>Certifications</h4>
+                <ul>
+                    <li>SolidWorks Professional (CSWP) - Surfacing</li>
+                    <li>SolidWorks Associate (CSWA) - Mechanical Design</li>
+                    <li>SolidWorks Associate (CSWA) - Simulation</li>
+                    <li>SolidWorks Associate (CSWA) - Additive Manufacturing</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 d-flex justify-content-center align-items-start">
+            <div>
+                <h4>Hands-On Skills</h4>
+                <ul>
+                    <li>TIG and MIG Welding</li>
+                    <li>Manual/CNC Mill</li>
+                    <li>Lathe</li>
+                    <li>3D Printing</li>
+                    <li>Plasma Cutting</li>
+                    <li>CNC Plasma/Laser Cutting</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
+
 
       </div>
     </motion.div>
