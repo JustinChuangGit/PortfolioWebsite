@@ -5,7 +5,7 @@ import './SkillSection.css';
 import Mechanical from './Mechanical';
 import Electrical from './Electrical';
 import Software from './Software';
-import { electrical_background, mechanical_background, software_background } from './constants';
+import { electrical_background, mechanical_background, software_background } from '../constants';
 import { AnimatePresence } from 'framer-motion';
 
 const SkillsSection = () => {

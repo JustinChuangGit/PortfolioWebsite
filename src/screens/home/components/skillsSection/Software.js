@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { skillDescriptions_delay, skillDescriptions_duration, software_background } from './constants';
+import { skillDescriptions_delay, skillDescriptions_duration, software_background } from '../constants';
 
 const Software = () => {
   return (

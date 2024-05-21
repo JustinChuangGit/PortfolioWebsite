@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { mechanical_background, skillDescriptions_delay, skillDescriptions_duration } from './constants';
+import { mechanical_background, skillDescriptions_delay, skillDescriptions_duration } from '../constants';
 
 const Mechanical = () => {
   
