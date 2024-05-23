@@ -8,10 +8,10 @@
     /* transition: border-bottom-left-radius 0.3s ease, border-bottom-right-radius 0.5s ease, height 0.5s ease; Add transition for height */
     border-top-Right-Radius: var(--border-radius-unclicked);
     border-top-left-radius: var(--border-radius-unclicked);
+    width: 100%; /* Ensure the skill box takes up 100% of its parent */
+    
 
 }
-
-
 
 .skill-box.not-selected {
     border-bottom-left-radius: var(--border-radius-unclicked);
@@ -41,9 +41,14 @@
 }
 
 .skill-description {
+  width: auto; /* Ensure description takes up 100% of its parent */
   overflow: hidden; /* Hide overflow */
   border-bottom-left-radius: var(--border-radius-unclicked);
   border-bottom-right-radius: var(--border-radius-unclicked);
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+
+
 }
 /* 
 @media (min-width: 768px) {
