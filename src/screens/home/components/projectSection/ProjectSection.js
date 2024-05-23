@@ -1,9 +1,6 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
 
-
-
-
 const ProjectSection = () => {
     const projectCards = [1, 2, 3, 4, 5, 6]; // Example array, replace with your dynamic data
 
