@@ -1,10 +1,19 @@
-/* styles.css */
+/* ProjectSection.css */
 .project-card-wrapper {
-    padding: 15px; /* Adjust as needed */
+    padding: 0.25rem 0.5rem;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     .project-card-wrapper {
-        padding: 15px 10px; /* Adjust as needed for medium screens */
+        padding: 1rem 0.5rem;
     }
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
 }

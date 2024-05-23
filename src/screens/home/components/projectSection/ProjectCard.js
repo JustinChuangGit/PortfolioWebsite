@@ -18,7 +18,7 @@ const ProjectCard = ({ project }) => {
 
   return (
     <div>
-      <Card style={{ width: '22rem' }} onClick={handleShow}>
+      <Card style={{ width: '100%' }} onClick={handleShow}>
         <Card.Body>
           <Card.Title>{project.ProjectName}</Card.Title>
           <Card.Text>
