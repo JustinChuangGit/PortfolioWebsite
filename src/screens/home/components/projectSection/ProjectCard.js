@@ -19,6 +19,9 @@ const ProjectCard = ({ project }) => {
   return (
     <div>
       <Card style={{ width: '100%' }} onClick={handleShow}>
+        <div className="card-img-ratio">
+          <img src="https://via.placeholder.com/150" alt="Placeholder image" />
+        </div>
         <Card.Body>
           <Card.Title>{project.ProjectName}</Card.Title>
           <Card.Text>
