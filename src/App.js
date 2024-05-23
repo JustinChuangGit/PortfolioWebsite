@@ -5,11 +5,15 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+
 import Home from './screens/home/Home.js';
 import Contact from './screens/contact/Contact.js';
 import Experience from './screens/experience/Experience.js';
 
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 
 function App() {
   // State to manage navbar collapse

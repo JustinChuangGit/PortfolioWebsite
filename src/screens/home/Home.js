@@ -1,9 +1,9 @@
 // components/Home.js
 
 import React from 'react';
-import Jumbotron from './components/Jumotron';
-import SkillsSection from './components/SkillsSection';
-import ProjectSection from './components/ProjectSection';
+import Jumbotron from './components/jumbotronSection/Jumotron';
+import SkillsSection from './components/skillsSection/SkillsSection';
+import ProjectSection from './components/projectSection/ProjectSection';
 
 function Home() {
   return (
@@ -14,10 +14,7 @@ function Home() {
 
       <Jumbotron />
       <SkillsSection />
-      <ProjectSection />  
-     
-
-
+      <ProjectSection />
     </div>
   );
 }
