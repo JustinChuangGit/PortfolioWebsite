@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import ProjectCard from './ProjectCard';
 import { db } from '../../../../services/firebase';
-import {collection, getDocs} from 'firebase/firestore';
+import { collection, getDocs } from 'firebase/firestore';
 import './ProjectSection.css';
-
 
 const ProjectSection = () => {
     const [projects, setProjects] = useState([]);
@@ -44,4 +43,3 @@ const ProjectSection = () => {
 };
 
 export default ProjectSection;
-
