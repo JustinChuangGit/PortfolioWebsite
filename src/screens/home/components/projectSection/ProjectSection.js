@@ -3,13 +3,14 @@ import ProjectCard from './ProjectCard';
 import { db } from '../../../../services/firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import './ProjectSection.css';
-import { Badge } from 'react-bootstrap';
+import { Badge, FormControl, InputGroup } from 'react-bootstrap';
 
 const ProjectSection = () => {
     const [projects, setProjects] = useState([]);
     const [uniqueTags, setUniqueTags] = useState([]);
     const [filteredProjects, setFilteredProjects] = useState([]);
     const [selectedTags, setSelectedTags] = useState([]);
+    const [searchQuery, setSearchQuery] = useState("");
 
     useEffect(() => {
         const fetchProjects = async () => {
@@ -37,19 +38,46 @@ const ProjectSection = () => {
             ? selectedTags.filter(t => t !== tag)
             : [...selectedTags, tag];
         setSelectedTags(updatedTags);
+        filterProjects(searchQuery, updatedTags);
+    };
 
-        if (updatedTags.length === 0) {
-            setFilteredProjects(projects);
-        } else {
-            setFilteredProjects(projects.filter(project =>
-                project.Tags && updatedTags.every(t => project.Tags.includes(t))
-            ));
+    const handleSearchChange = (e) => {
+        const query = e.target.value.toLowerCase();
+        setSearchQuery(query);
+        filterProjects(query, selectedTags);
+    };
+
+    const filterProjects = (query, tags) => {
+        let filtered = projects;
+
+        if (query) {
+            filtered = filtered.filter(project =>
+                (project.ProjectName && project.ProjectName.toLowerCase().includes(query)) ||
+                (project.Tags && project.Tags.some(tag => tag.toLowerCase().includes(query)))
+            );
         }
+
+        if (tags.length > 0) {
+            filtered = filtered.filter(project =>
+                project.Tags && tags.every(t => project.Tags.includes(t))
+            );
+        }
+
+        setFilteredProjects(filtered);
     };
 
     return (
         <div className='container d-flex flex-column align-items-center'>
             <h1 className='text-center mb-4'>Project Section</h1>
+            <InputGroup className="mb-3">
+                <FormControl
+                    placeholder="Search projects..."
+                    aria-label="Search projects"
+                    aria-describedby="basic-addon2"
+                    value={searchQuery}
+                    onChange={handleSearchChange}
+                />
+            </InputGroup>
             <div className="mb-4">
                 <h5>Filter by Tags:</h5>
                 {uniqueTags.map((tag, index) => (
