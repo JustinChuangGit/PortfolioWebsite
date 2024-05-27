@@ -5,6 +5,8 @@ import { getDownloadURL, ref } from 'firebase/storage';
 import { storage } from '../../../../services/firebase';
 import './ProjectCard.css';
 
+import { Badge } from 'react-bootstrap';
+
 const ProjectCard = ({ project }) => {
   const [show, setShow] = useState(false);
   const [thumbnailUrl, setThumbnailUrl] = useState('');
@@ -13,14 +15,12 @@ const ProjectCard = ({ project }) => {
   useEffect(() => {
     const fetchImageUrls = async () => {
       try {
-        // Fetch Thumbnail URL
         if (project.ThumbnailURL) {
           const thumbnailRef = ref(storage, project.ThumbnailURL);
           const url = await getDownloadURL(thumbnailRef);
           setThumbnailUrl(url);
         }
 
-        // Fetch Slider Images URLs
         if (project.Images) {
           const urls = await Promise.all(
             project.Images.map(async (imagePath) => {
@@ -60,6 +60,11 @@ const ProjectCard = ({ project }) => {
           <Card.Text>
             {project.Description}
           </Card.Text>
+          <div>
+            {project.Tags && project.Tags.map((tag, index) => (
+              <Badge key={index} variant="primary" className="mr-1">{tag}</Badge>
+            ))}
+          </div>
         </Card.Body>
       </Card>
 
@@ -68,9 +73,9 @@ const ProjectCard = ({ project }) => {
           <Modal.Title>{project.ProjectName}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <div className='p-1'>
+          <div className='p-5'>
             <h1>{project.ProjectName}</h1>
-            <div className="slider-container mb-5">
+            <div className="slider-container">
               <Slider {...settings}>
                 {imageUrls.map((url, index) => (
                   <div key={index}>
