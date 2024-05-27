@@ -9,7 +9,7 @@ const ProjectSection = () => {
     const [projects, setProjects] = useState([]);
     const [uniqueTags, setUniqueTags] = useState([]);
     const [filteredProjects, setFilteredProjects] = useState([]);
-    const [selectedTag, setSelectedTag] = useState(null);
+    const [selectedTags, setSelectedTags] = useState([]);
 
     useEffect(() => {
         const fetchProjects = async () => {
@@ -33,11 +33,17 @@ const ProjectSection = () => {
     }, []);
 
     const handleTagClick = (tag) => {
-        setSelectedTag(tag);
-        if (tag) {
-            setFilteredProjects(projects.filter(project => project.Tags && project.Tags.includes(tag)));
-        } else {
+        const updatedTags = selectedTags.includes(tag)
+            ? selectedTags.filter(t => t !== tag)
+            : [...selectedTags, tag];
+        setSelectedTags(updatedTags);
+
+        if (updatedTags.length === 0) {
             setFilteredProjects(projects);
+        } else {
+            setFilteredProjects(projects.filter(project =>
+                project.Tags && updatedTags.every(t => project.Tags.includes(t))
+            ));
         }
     };
 
@@ -46,21 +52,11 @@ const ProjectSection = () => {
             <h1 className='text-center mb-4'>Project Section</h1>
             <div className="mb-4">
                 <h5>Filter by Tags:</h5>
-                <Badge
-                    variant="secondary"
-                    className="mr-2"
-                    onClick={() => handleTagClick(null)}
-                    style={{ cursor: 'pointer' }}
-                >
-                    All
-                </Badge>
                 {uniqueTags.map((tag, index) => (
                     <Badge
                         key={index}
-                        variant="primary"
-                        className="mr-2"
+                        className={`mr-2 ${selectedTags.includes(tag) ? "badge-selected" : "badge-unselected"}`}
                         onClick={() => handleTagClick(tag)}
-                        style={{ cursor: 'pointer' }}
                     >
                         {tag}
                     </Badge>

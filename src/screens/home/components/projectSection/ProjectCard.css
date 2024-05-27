@@ -81,3 +81,9 @@
         object-fit: contain; /* Ensure the entire image fits within the box */
       }
   }
+
+  /* ProjectSection.css */
+.badge {
+    cursor: pointer;
+    margin: 0.2rem;
+  }
