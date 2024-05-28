@@ -3,7 +3,7 @@ import ProjectCard from './ProjectCard';
 import { db } from '../../../../services/firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import './ProjectSection.css';
-import { Badge, FormControl, InputGroup } from 'react-bootstrap';
+import { Badge, FormControl, InputGroup, Button } from 'react-bootstrap';
 
 const ProjectSection = () => {
     const [projects, setProjects] = useState([]);
@@ -11,16 +11,30 @@ const ProjectSection = () => {
     const [filteredProjects, setFilteredProjects] = useState([]);
     const [selectedTags, setSelectedTags] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
+    const [visibleProjects, setVisibleProjects] = useState(3);
 
     useEffect(() => {
         const fetchProjects = async () => {
             try {
                 const projectCollection = collection(db, 'projectList');
                 const projectSnapshot = await getDocs(projectCollection);
-                const projectList = projectSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+                const projectList = projectSnapshot.docs.map(doc => ({
+                    id: doc.id,
+                    ...doc.data(),
+                    Priority: doc.data().Priority ? Number(doc.data().Priority) : null
+                }));
+
                 console.log("Fetched projects:", projectList);
-                setProjects(projectList);
-                setFilteredProjects(projectList);
+                
+                // Sort projects by priority (highest first), with undefined priorities last
+                const sortedProjects = projectList.sort((a, b) => {
+                    if (a.Priority === null) return 1;
+                    if (b.Priority === null) return -1;
+                    return b.Priority - a.Priority;
+                });
+
+                setProjects(sortedProjects);
+                setFilteredProjects(sortedProjects);
 
                 // Collect all unique tags
                 const tags = projectList.flatMap(project => project.Tags || []);
@@ -31,6 +45,20 @@ const ProjectSection = () => {
         };
 
         fetchProjects();
+    }, []);
+
+    useEffect(() => {
+        const updateVisibleProjects = () => {
+            if (window.innerWidth <= 576) { // Small screen size
+                setVisibleProjects(3);
+            } else { // Larger screens
+                setVisibleProjects(6);
+            }
+        };
+
+        updateVisibleProjects();
+        window.addEventListener('resize', updateVisibleProjects);
+        return () => window.removeEventListener('resize', updateVisibleProjects);
     }, []);
 
     const handleTagClick = (tag) => {
@@ -66,6 +94,14 @@ const ProjectSection = () => {
         setFilteredProjects(filtered);
     };
 
+    const handleShowMore = () => {
+        setVisibleProjects(prev => prev + 3);
+    };
+
+    const handleShowAll = () => {
+        setVisibleProjects(filteredProjects.length);
+    };
+
     return (
         <div className='container d-flex flex-column align-items-center'>
             <h1 className='text-center mb-4'>Project Section</h1>
@@ -91,7 +127,7 @@ const ProjectSection = () => {
                 ))}
             </div>
             <div className='row justify-content-center w-100'>
-                {filteredProjects.map((project, index) => (
+                {filteredProjects.slice(0, visibleProjects).map((project, index) => (
                     <div
                         className='col-lg-4 col-md-6 col-sm-12 mb-4'
                         key={index}
@@ -101,6 +137,18 @@ const ProjectSection = () => {
                         </div>
                     </div>
                 ))}
+            </div>
+            <div className='d-flex justify-content-between w-100'>
+                {visibleProjects < filteredProjects.length && (
+                    <Button onClick={handleShowMore} variant="primary">
+                        Show More
+                    </Button>
+                )}
+                {visibleProjects < filteredProjects.length && (
+                    <Button onClick={handleShowAll} variant="secondary">
+                        Show All
+                    </Button>
+                )}
             </div>
         </div>
     );
