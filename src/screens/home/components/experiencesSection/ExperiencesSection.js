@@ -43,13 +43,28 @@ const experiences = {
   ],
   education: [
     {
-      title: "BSc in Computer Science",
-      institution: "University of Somewhere",
-      duration: "2015 - 2019",
+        title: "Master of in Electrical and Computer Engineering - Robotics and Control",
+        institution: "Western University",
+        duration: "2023 - Current",
+        bulletPoints: [
+            "ECE9069 - Hacking",
+            "ECE9156 - Topics of Autonomous Robots",
+            "ECE9039 - Machine Learning",
+            "ECE9047 - Sensor Networks and Embedded Systems",
+            "ECE9031 - Advanced Digital Signal Processing",
+            "ECE9021 - Digital Image Processing",
+            "ECE9014 - Data Management and Applications",
+        ],
+    },
+    {
+      title: "Bachelor of Engineering - Mechatronic Systems Engineering",
+      institution: "Western University",
+      duration: "2019 - 2023",
       bulletPoints: [
-        "Focused on software development and algorithms.",
-        "Completed a capstone project on machine learning.",
-        "Received the Dean's List award for academic excellence.",
+        "MSE4401 - Robotic Manipulators",
+        "ECE4469 - Applied Control Systems",
+        "MME4480 - Reverse Engineering",
+        "ECE4460 - Real-Time and Embedded Systems",
       ],
     },
   ],
@@ -94,6 +109,7 @@ const ExperiencesSection = () => {
           <h4>{experience.title}</h4>
           <h5>{experience.institution}</h5>
           <h6>{experience.duration}</h6>
+          <h7>Advanced Course Work:</h7>
           <ul>
             {experience.bulletPoints.map((point, idx) => (
               <li key={idx}>{point}</li>
