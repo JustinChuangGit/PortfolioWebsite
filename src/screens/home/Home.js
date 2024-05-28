@@ -4,6 +4,7 @@ import React from 'react';
 import Jumbotron from './components/jumbotronSection/Jumotron';
 import SkillsSection from './components/skillsSection/SkillsSection';
 import ProjectSection from './components/projectSection/ProjectSection';
+import ExperiencesSection from './components/experiencesSection/ExperiencesSection';
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
       <Jumbotron />
       <SkillsSection />
       <ProjectSection />
+      <ExperiencesSection />
     </div>
   );
 }
