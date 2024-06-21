@@ -1,13 +1,15 @@
-#particles-bg canvas {
+/* Jumbotron.css */
+.jumbotron {
+  position: relative;
+  overflow: hidden; /* Prevent infinite scroll */
+  height: 400px; /* Adjust as needed to fit your design */
+}
+
+.jumbotron .particles {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   z-index: -1; /* Ensure particles are behind the content */
-}
-
-.jumbotron {
-  position: relative;
-  overflow: hidden; /* Prevent infinite scroll */
 }
