@@ -1,0 +1,23 @@
+/* Jumbotron.css */
+.jumbotron-container {
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .jumbotron {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5rem;
+    border-radius: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .jumbotron h1,
+  .jumbotron p {
+    color: #000;
+  }
+  
