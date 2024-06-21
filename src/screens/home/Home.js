@@ -9,9 +9,6 @@ import ExperiencesSection from './components/experiencesSection/ExperiencesSecti
 function Home() {
   return (
     <div className="App">
-      <header className="bg-primary text-white p-3">
-        <h1>Welcome to My Website</h1>
-      </header>
 
       <Jumbotron />
       <SkillsSection />
