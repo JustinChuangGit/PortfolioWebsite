@@ -19,7 +19,7 @@ const ParticlesBackground = ({ id }) => {
           value: "transparent", // Ensure background is transparent
         },
       },
-      fpsLimit: 120,
+      fpsLimit: 300,
       interactivity: {
         events: {
           onClick: {
@@ -37,7 +37,10 @@ const ParticlesBackground = ({ id }) => {
             duration: 15,
           },
           grab: {
-            distance: 150,
+            distance: 20,
+          },
+          repulse: {
+            distance: 75,
           },
         },
       },
