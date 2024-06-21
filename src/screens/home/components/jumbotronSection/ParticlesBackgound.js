@@ -9,18 +9,14 @@ const ParticlesBackground = ({ id }) => {
     });
   }, []);
 
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
-
   const options = useMemo(
     () => ({
       fullScreen: {
-        enable: false,
+        enable: false, // Disable full screen background
       },
       background: {
         color: {
-          value: "#000000",
+          value: "transparent", // Ensure background is transparent
         },
       },
       fpsLimit: 120,
@@ -88,7 +84,7 @@ const ParticlesBackground = ({ id }) => {
   );
 
   return (
-    <Particles id={id} init={particlesLoaded} options={options} className="particles" />
+    <Particles id={id} options={options} className="particles" />
   );
 };
 

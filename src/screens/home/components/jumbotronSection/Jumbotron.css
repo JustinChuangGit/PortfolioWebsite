@@ -1,8 +1,18 @@
-/* Jumbotron.css */
 .jumbotron {
   position: relative;
-  overflow: hidden; /* Prevent infinite scroll */
+  overflow: hidden;
   height: 400px; /* Adjust as needed to fit your design */
+}
+
+.jumbotron::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse 80% 110% at 50% 0%, rgba(0, 0, 0, 0.1) 0%, rgb(0, 0, 0) 60%);
+  z-index: -2; /* Ensure it's behind the particles */
 }
 
 .jumbotron .particles {
@@ -11,5 +21,5 @@
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -1; /* Ensure particles are behind the content */
+  z-index: -1; /* Ensure particles are behind the content but above the gradient background */
 }
