@@ -3,7 +3,10 @@
   position: relative;
   overflow: hidden;
   height: 400px; /* Adjust as needed to fit your design */
+  background-color: white;
+  z-index: -5;
 }
+
 
 .jumbotron::before {
   content: '';
@@ -24,4 +27,31 @@
   left: 0;
   z-index: -1; /* Ensure particles are behind the content but above the gradient background */
 }
+.jumbotron h1 {
+  font-family: 'Integral CF', sans-serif;
+  font-weight: 900; /* Use heavy weight */
+  font-size: 7rem; /* Default size */
+}
+@media (max-width: 1200px) {
+  .jumbotron h1 {
+    font-size: 8rem; /* Adjust for medium screens */
+  }
+}
 
+@media (max-width: 768px) {
+  .jumbotron h1 {
+    font-size: 5rem; /* Adjust for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .jumbotron h1 {
+    font-size: 4rem; /* Adjust for very small screens */
+  }
+}
+
+.main-title {
+  max-width: 80%; /* Adjust as needed for responsiveness */
+  margin: 0 auto; /* Center the container */
+  text-align: center; /* Center the text */
+}

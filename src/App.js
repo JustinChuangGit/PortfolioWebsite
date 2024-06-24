@@ -13,7 +13,7 @@ import Experience from './screens/experience/Experience.js';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import './App.css';
 
 function App() {
   // State to manage navbar collapse

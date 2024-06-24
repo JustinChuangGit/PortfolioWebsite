@@ -47,6 +47,7 @@ const ParticlesBackground = ({ id }) => {
       particles: {
         color: {
           value: "#FFFFFF",
+          opacity:0.9,
         },
         links: {
           color: "#FFFFFF",
