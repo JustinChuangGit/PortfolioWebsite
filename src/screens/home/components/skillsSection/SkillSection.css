@@ -66,3 +66,76 @@
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
+
+.skills-category-header {
+  display: flex;
+  align-items: center; /* Center vertically */
+  margin-bottom: 1rem;
+}
+
+.skills-category-header .icon {
+  margin-right: 0.5rem; /* Add space between icon and text */
+}
+
+.logo{
+  margin-top: 0.25rem;
+}
+
+.custom-list {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0; /* Remove default padding */
+  font-family: 'Onest', sans-serif;
+  font-weight: 400; /* Adjust the weight if necessary */
+  font-size:0.85rem;
+}
+
+.custom-list li {
+  position: relative; /* Required for positioning the icon */
+  padding-left: 30px; /* Adjust based on icon size */
+  margin-bottom: 10px; /* Adjust spacing between list items */
+}
+
+.custom-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px; /* Adjust based on icon size */
+  height: 20px; /* Adjust based on icon size */
+  background: url('../../../../assets/images/checkIcon.png') no-repeat center center;
+  background-size: contain;
+}
+
+.title-icon{
+  width: 1.5rem; /* Adjust size as needed */
+  height: auto;
+  margin-right: 10px; /* Adjust space between icon and text */
+}
+.icon-text-container {
+  display: flex;
+  align-items: center; /* Vertically center the items */
+  justify-content: center; /* Horizontally center the items */
+}
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap; /* Allow badges to wrap to the next line if they don't fit */
+  justify-content: center; /* Center the badges horizontally */
+  margin-top: 10px; /* Add some space between the badges and other content */
+}
+
+.badge {
+  background-color: #ffffff; /* Change this color to your desired background color */
+  color: black; /* Change the text color if needed */
+  padding: 5px 10px; /* Adjust padding for badges */
+  margin: 5px; /* Add space between badges */
+  border-radius: 12px; /* Add rounded corners */
+  display: inline-block; /* Ensure badges are inline-block elements */
+  font-family: 'Onest', sans-serif;
+  padding: 0.5rem 1rem;
+}
+
+.software-logos{
+  margin-left: 1.8rem;
+}

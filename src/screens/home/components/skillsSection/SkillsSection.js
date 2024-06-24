@@ -16,9 +16,9 @@ const SkillsSection = () => {
   };
 
   const initialSkills = [
-    { id: 'mechanical', name: 'Mechanical Engineering Skills', color: mechanical_background },
-    { id: 'electrical', name: 'Electrical Engineering Skills', color: electrical_background },
-    { id: 'software', name: 'Software Engineering Skills', color: software_background },
+    { id: 'mechanical', name: 'Mechanical Engineering', color: mechanical_background, icon: '/assets/images/mechanicalSkillsIcon.png' },
+    { id: 'electrical', name: 'Electrical Engineering', color: electrical_background, icon: '/assets/images/ElectricalSkillsIcon.png' },
+    { id: 'software', name: 'Software Engineering', color: software_background, icon: '/assets/images/SoftwareSkillsIcon.png' },
   ];
 
   const [skills, setSkills] = useState(initialSkills);
@@ -37,7 +37,6 @@ const SkillsSection = () => {
     if (selectedSkillId === clickedSkill.id) {
       setSelectedSkillId(null); // Deselect if the same skill is clicked again
     } else {
-      setSelectedSkillId(null); // Deselect if the same skill is clicked again
       setSelectedSkillId(clickedSkill.id); // Select the new skill
       if (isMobile) {
         const filteredSkills = skills.filter(skill => skill.id !== clickedSkill.id);
@@ -63,7 +62,10 @@ const SkillsSection = () => {
                   onClick={() => handleSkillClick(skill)}
                   style={{ backgroundColor: skill.color }}
                 >
-                  {skill.name}
+                  <div className="icon-text-container">
+                    <img src={skill.icon} alt="icon" className="title-icon" />
+                    <span>{skill.name}</span>
+                  </div>
                 </div>
               </div>
             </Flipped>
