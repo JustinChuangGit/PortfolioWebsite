@@ -10,6 +10,10 @@ class Jumbotron extends Component {
         <div className='main-title'>
           <h1>HI IM JUSTIN CHUANG</h1>
         </div>
+
+        <div className='sub-title'>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales at leo a porta. Suspendisse porta tellus lectus, iaculis vestibulum elit hendrerit ut...</p>
+        </div>
       </div>
     );
   }

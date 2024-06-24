@@ -2,7 +2,7 @@
 .jumbotron {
   position: relative;
   overflow: hidden;
-  height: 400px; /* Adjust as needed to fit your design */
+  height: auto; /* Adjust as needed to fit your design */
   background-color: white;
   z-index: -5;
 }
@@ -15,7 +15,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(ellipse 80% 110% at 50% 0%, rgba(0, 0, 0, 0.5) 0%, rgb(0, 0, 0) 60%);
+  background: radial-gradient(ellipse 80% 110% at 50% 0%, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 50%);
   z-index: -2; /* Ensure it's behind the particles */
 }
 
@@ -27,11 +27,18 @@
   left: 0;
   z-index: -1; /* Ensure particles are behind the content but above the gradient background */
 }
+
 .jumbotron h1 {
   font-family: 'Integral CF', sans-serif;
   font-weight: 900; /* Use heavy weight */
   font-size: 7rem; /* Default size */
 }
+
+.jumbotron p {
+  color:#B0B0B0;
+  font-size: 1rem;;
+}
+
 @media (max-width: 1200px) {
   .jumbotron h1 {
     font-size: 8rem; /* Adjust for medium screens */
@@ -54,4 +61,12 @@
   max-width: 80%; /* Adjust as needed for responsiveness */
   margin: 0 auto; /* Center the container */
   text-align: center; /* Center the text */
+  margin-top: 3rem;
+}
+
+.sub-title {
+  max-width: 60%; /* Adjust as needed for responsiveness */
+  margin: 0 auto; /* Center the container */
+  text-align: center; /* Center the text */
+  margin-top: 2rem;
 }

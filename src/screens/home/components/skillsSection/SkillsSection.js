@@ -50,6 +50,10 @@ const SkillsSection = () => {
   return (
     <Flipper flipKey={skills.map(skill => skill.id).join('')} spring={{ stiffness: 160, damping: 26, duration: 500 }}>
       <div className="container my-5">
+        <h2 className="text-center skills-title">Skills</h2>
+        <div className='skills-subtitle-container'>
+          <p className="text-center skills-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales at leo a porta. Suspendisse porta tellus lectus, iaculis vestibulum elit hendrerit ut...</p>
+        </div>
         <div className="row">
           {skills.map(skill => (
             <Flipped key={skill.id} flipId={skill.id}>

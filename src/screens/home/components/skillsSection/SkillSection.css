@@ -2,6 +2,24 @@
     --border-radius-unclicked: 20px;
     --border-radius-clicked: 0px;
 }
+
+.skills-title{
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.skills-subtitle{
+  color:#B0B0B0;
+  font-size: 1rem;;
+
+}
+
+.skills-subtitle-container{
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 60%;
+}
   
 .skill-box {
     cursor: 'pointer';
@@ -47,21 +65,4 @@
   border-bottom-right-radius: var(--border-radius-unclicked);
   margin-right: 0.75rem;
   margin-left: 0.75rem;
-
-
 }
-/* 
-@media (min-width: 768px) {
-  .mechanical-description {
-    border-top-right-radius: var(--border-radius-clicked);
-  }
-
-  .electrical-description {
-    border-top-right-radius: var(--border-radius-unclicked);
-    border-top-left-radius: var(--border-radius-unclicked);
-  }
-
-  .software-description {
-    border-top-left-radius: var(--border-radius-unclicked);
-  }
-} */
