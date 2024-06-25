@@ -139,3 +139,23 @@
 .software-logos{
   margin-left: 1.8rem;
 }
+
+.logo-electrical {
+  height: 7rem; /* Adjust the size as needed */
+  width: auto;
+  margin: 1rem; /* Adjust the spacing between logos */
+}
+
+@media (max-width: 768px) {
+  .logo-electrical {
+    height: 5rem; /* Adjust size for smaller screens */
+    margin: 0.5rem; /* Adjust spacing for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-electrical {
+    height: 4rem; /* Adjust size for very small screens */
+    margin: 0.5rem; /* Adjust spacing for very small screens */
+  }
+}
