@@ -44,7 +44,7 @@ const Electrical = () => {
             <p>My initial project involved designing and printing my first board, a milestone that marked the beginning of my deep dive into professional PCB development. Since then, I have eagerly embraced opportunities to design and implement professional PCBs in my projects.'m also pretty handy with a soldering iron, making sure all connections are solid and clean. And when things don’t go as planned? I grab an oscilloscope to troubleshoot and fine-tune the system until everything’s running smoothly. </p>
             <p>My expertise extends to integrating microcontrollers like Arduinos, ESP32s, ARM, and Raspberry Pis with my boards, enabling a variety of outputs and applications. This hands-on experience has not only refined my technical abilities but also fueled my continuous pursuit of innovative electrical solutions.</p>
         
-            <h4>PCB Software Experience</h4>
+            <h4 className='text-center'>PCB Software Experience</h4>
               <div className='d-flex justify-content-center align-items-center flex-wrap mt-3'>
                 <img src={EagleLogo} alt="Eagle Logo" className="logo-electrical" />
                 <img src={AltiumLogo} alt="Altium Logo" className="logo-electrical" />
