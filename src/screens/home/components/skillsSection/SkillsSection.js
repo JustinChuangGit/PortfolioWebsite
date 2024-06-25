@@ -8,6 +8,10 @@ import Software from './Software';
 import { electrical_background, mechanical_background, software_background } from '../constants';
 import { AnimatePresence } from 'framer-motion';
 
+import mechanicalSkillsLogo from '../../../../assets/images/mechanicalSkillsIcon.png'
+import electricalSkillsLogo from '../../../../assets/images/ElectricalSkillsIcon.png'
+import softwareSkillsLogo from '../../../../assets/images/SoftwareSkillsIcon.png'
+
 const SkillsSection = () => {
   const skillComponents = {
     mechanical: <Mechanical />,
@@ -16,9 +20,9 @@ const SkillsSection = () => {
   };
 
   const initialSkills = [
-    { id: 'mechanical', name: 'Mechanical Engineering', color: mechanical_background, icon: '/assets/images/mechanicalSkillsIcon.png' },
-    { id: 'electrical', name: 'Electrical Engineering', color: electrical_background, icon: '/assets/images/ElectricalSkillsIcon.png' },
-    { id: 'software', name: 'Software Engineering', color: software_background, icon: '/assets/images/SoftwareSkillsIcon.png' },
+    { id: 'mechanical', name: 'Mechanical Engineering', color: mechanical_background, icon: mechanicalSkillsLogo },
+    { id: 'electrical', name: 'Electrical Engineering', color: electrical_background, icon: electricalSkillsLogo },
+    { id: 'software', name: 'Software Engineering', color: software_background, icon: softwareSkillsLogo },
   ];
 
   const [skills, setSkills] = useState(initialSkills);
