@@ -104,7 +104,10 @@ const ProjectSection = () => {
 
     return (
         <div className='container d-flex flex-column align-items-center'>
-            <h1 className='text-center mb-4'>Project Section</h1>
+            <h1 className='text-center mb-4'>Projects</h1>
+            <div className='projectSection-subtitle'>
+                <p className='text-center mb-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales at leo a porta. Suspendisse porta tellus lectus, iaculis vestibulum elit hendrerit ut...</p>
+            </div>
             <InputGroup className="mb-3">
                 <FormControl
                     placeholder="Search projects..."
@@ -115,7 +118,7 @@ const ProjectSection = () => {
                 />
             </InputGroup>
             <div className="mb-4">
-                <h5>Filter by Tags:</h5>
+                <h5 className='mb-3'>Filter by Tags:</h5>
                 {uniqueTags.map((tag, index) => (
                     <Badge
                         key={index}

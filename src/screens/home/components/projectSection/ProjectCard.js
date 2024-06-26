@@ -51,16 +51,16 @@ const ProjectCard = ({ project }) => {
 
   return (
     <div>
-      <Card style={{ width: '100%' }} onClick={handleShow}>
-        <div className="card-img-ratio">
+      <Card className='project-card' style={{ width: '100%' }} onClick={handleShow} >
+        <div className="card-img-ratio project-card">
           <img src={thumbnailUrl || "https://via.placeholder.com/150"} alt={project.ProjectName} />
         </div>
-        <Card.Body>
+        <Card.Body className='text-start'>
           <Card.Title>{project.ProjectName}</Card.Title>
-          <Card.Text>
+          <Card.Text className='card-description'>
             {project.Description}
           </Card.Text>
-          <div>
+          <div className='card-tags'>
             {project.Tags && project.Tags.map((tag, index) => (
               <Badge key={index} variant="primary" className="mr-1">{tag}</Badge>
             ))}
@@ -68,13 +68,12 @@ const ProjectCard = ({ project }) => {
         </Card.Body>
       </Card>
 
-      <Modal show={show} onHide={handleClose} size="lg">
+      <Modal show={show} onHide={handleClose} size="lg" className='popup-content'>
         <Modal.Header closeButton>
           <Modal.Title>{project.ProjectName}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <div className='p-5'>
-            <h1>{project.ProjectName}</h1>
+          <div className='p-3 popup-content'>
             <div className="slider-container">
               <Slider {...settings}>
                 {imageUrls.map((url, index) => (
@@ -85,7 +84,7 @@ const ProjectCard = ({ project }) => {
               </Slider>
             </div>
             {project.Heading && project.Paragraph && project.Heading.map((heading, index) => (
-              <div key={index}>
+              <div key={index} className='mt-5'>
                 <h5>{heading}</h5>
                 <p>{project.Paragraph[index]}</p>
               </div>

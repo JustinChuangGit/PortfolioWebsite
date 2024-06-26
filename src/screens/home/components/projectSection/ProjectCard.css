@@ -86,4 +86,31 @@
 .badge {
     cursor: pointer;
     margin: 0.2rem;
+    background-color: #2a2a2a !important;
+    color:white !important;
+
   }
+
+  .popup-content{
+    color:black;
+  }
+
+
+.project-card{
+  height: 28rem;
+}
+
+.card-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden; /* Hide overflow if necessary */
+  max-height: 4.2rem; /* Optional: Limit the height */
+}
