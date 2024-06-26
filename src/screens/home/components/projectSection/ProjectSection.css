@@ -1,6 +1,6 @@
 /* ProjectSection.css */
 .project-card-wrapper {
-    padding: 1rem; /* Adjust as needed */
+    padding-bottom: 0rem; /* Adjust as needed */
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
