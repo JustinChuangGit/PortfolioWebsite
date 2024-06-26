@@ -51,7 +51,7 @@ const ProjectCard = ({ project, index }) => {
 
   return (
     <div>
-      <Card className={` d-flex flex-column ${index < 2 ? 'project-card-large' : 'project-card'}`} style={{ width: '100%' }} onClick={handleShow}>
+      <Card className={`project-card d-flex flex-column ${index < 2 ? 'project-card-large' : ''}`} onClick={handleShow}>
         <div className="card-img-ratio">
           <img src={thumbnailUrl || "https://via.placeholder.com/150"} alt={project.ProjectName} />
         </div>
