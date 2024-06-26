@@ -129,18 +129,18 @@ const ProjectSection = () => {
                     </Badge>
                 ))}
             </div>
-            <div className='row justify-content-center w-100'>
+            <div className='row project-row justify-content-center w-100'>
                 {filteredProjects.slice(0, visibleProjects).map((project, index) => (
                     <div
-                    className={`mb-4 ${index < 2 ? 'col-lg-6 col-md-12 larger-project' : 'col-lg-4 col-md-6 col-sm-12'}`}
-                    key={index}
+                        className={`mb-4 ${index < 2 ? 'col-lg-6 col-md-12 larger-project' : 'col-lg-4 col-md-6 col-sm-12'} d-flex`}
+                        key={index}
                     >
-                    <div className='project-card-wrapper'>
-                        <ProjectCard project={project} />
-                    </div>
+                        <div className='project-card-wrapper h-100 d-flex flex-column'>
+                            <ProjectCard project={project} index={index}/>
+                        </div>
                     </div>
                 ))}
-                </div>
+            </div>
             <div className='d-flex justify-content-between w-100'>
                 {visibleProjects < filteredProjects.length && (
                     <Button onClick={handleShowMore} variant="primary">

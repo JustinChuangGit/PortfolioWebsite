@@ -7,7 +7,7 @@ import './ProjectCard.css';
 
 import { Badge } from 'react-bootstrap';
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, index }) => {
   const [show, setShow] = useState(false);
   const [thumbnailUrl, setThumbnailUrl] = useState('');
   const [imageUrls, setImageUrls] = useState([]);
@@ -51,16 +51,16 @@ const ProjectCard = ({ project }) => {
 
   return (
     <div>
-      <Card className='project-card' style={{ width: '100%' }} onClick={handleShow} >
+      <Card className={` d-flex flex-column ${index < 2 ? 'project-card-large' : 'project-card'}`} style={{ width: '100%' }} onClick={handleShow}>
         <div className="card-img-ratio">
           <img src={thumbnailUrl || "https://via.placeholder.com/150"} alt={project.ProjectName} />
         </div>
-        <Card.Body className='text-start'>
+        <Card.Body className='text-start d-flex flex-column flex-grow-1'>
           <Card.Title>{project.ProjectName}</Card.Title>
           <Card.Text className='card-description'>
             {project.Description}
           </Card.Text>
-          <div className='card-tags'>
+          <div className='card-tags mt-auto'>
             {project.Tags && project.Tags.map((tag, index) => (
               <Badge key={index} variant="primary" className="mr-1">{tag}</Badge>
             ))}
