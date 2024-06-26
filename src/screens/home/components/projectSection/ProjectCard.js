@@ -56,7 +56,10 @@ const ProjectCard = ({ project, index }) => {
           <img src={thumbnailUrl || "https://via.placeholder.com/150"} alt={project.ProjectName} />
         </div>
         <Card.Body className='text-start d-flex flex-column flex-grow-1'>
-          <Card.Title>{project.ProjectName}</Card.Title>
+          <div className='d-flex justify-content-between align-items-center'>
+            <Card.Title>{project.ProjectName}</Card.Title>
+            <span class="material-symbols-outlined">open_in_new</span>
+          </div>
           <Card.Text className='card-description'>
             {project.Description}
           </Card.Text>
