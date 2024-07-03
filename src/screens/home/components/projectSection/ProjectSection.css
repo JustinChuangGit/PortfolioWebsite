@@ -63,3 +63,12 @@
     width: 60%;
   }
 
+.more-button{
+  background-color: #B0B0B0;
+  color: #1A1A1A;
+}
+
+.all-button{
+  background-color: #1A1A1A;
+  color: #B0B0B0;
+}
