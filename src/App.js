@@ -15,6 +15,26 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './App.css';
 
+import emailjs from 'emailjs-com';
+emailjs.init({
+  publicKey: 'hQlTc-DR44Rw5ebKP',
+  // Do not allow headless browsers
+  blockHeadless: true,
+  blockList: {
+    // Block the suspended emails
+    list: ['foo@emailjs.com', 'bar@emailjs.com'],
+    // The variable contains the email address
+    watchVariable: 'userEmail',
+  },
+  limitRate: {
+    // Set the limit rate for the application
+    id: 'app',
+    // Allow 1 request per 10s
+    throttle: 10000,
+  },
+});
+
+
 function App() {
   // State to manage navbar collapse
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
