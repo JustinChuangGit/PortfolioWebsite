@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Modal, Button, Card } from 'react-bootstrap';
+import { Modal, Button, Card, Badge } from 'react-bootstrap';
 import Slider from 'react-slick';
 import { getDownloadURL, ref } from 'firebase/storage';
 import { storage } from '../../../../services/firebase';
 import './ProjectCard.css';
-
-import { Badge } from 'react-bootstrap';
 
 const ProjectCard = ({ project, index }) => {
   const [show, setShow] = useState(false);
@@ -43,10 +41,10 @@ const ProjectCard = ({ project, index }) => {
 
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: imageUrls.length > 1,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
   };
 
   return (
@@ -58,7 +56,7 @@ const ProjectCard = ({ project, index }) => {
         <Card.Body className='text-start d-flex flex-column flex-grow-1'>
           <div className='d-flex justify-content-between align-items-center'>
             <Card.Title>{project.ProjectName}</Card.Title>
-            <span class="material-symbols-outlined">open_in_new</span>
+            <span className="material-symbols-outlined">open_in_new</span>
           </div>
           <Card.Text className='card-description'>
             {project.Description}
@@ -79,11 +77,17 @@ const ProjectCard = ({ project, index }) => {
           <div className='p-3 popup-content'>
             <div className="slider-container">
               <Slider {...settings}>
-                {imageUrls.map((url, index) => (
-                  <div key={index}>
-                    <img src={url || "https://via.placeholder.com/800x400"} alt={`${project.ProjectName} ${index + 1}`} />
+                {imageUrls.length > 0 ? (
+                  imageUrls.map((url, index) => (
+                    <div key={index}>
+                      <img src={url || "https://via.placeholder.com/800x400"} alt={`${project.ProjectName} ${index + 1}`} />
+                    </div>
+                  ))
+                ) : (
+                  <div>
+                    <img src="https://via.placeholder.com/800x400" alt="Placeholder" />
                   </div>
-                ))}
+                )}
               </Slider>
             </div>
             {project.Heading && project.Paragraph && project.Heading.map((heading, index) => (
