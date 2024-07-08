@@ -143,7 +143,7 @@ const ProjectSection = () => {
             </div>
             <div className='d-flex justify-content-between w-100 px-3'>
                 {visibleProjects < filteredProjects.length && (
-                    <Button onClick={handleShowMore} variant="primary" className='more-button'>
+                    <Button onClick={handleShowMore} variant="secondary" className='more-button'>
                         Show More
                     </Button>
                 )}
