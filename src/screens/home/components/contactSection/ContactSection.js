@@ -32,7 +32,7 @@ const ContactSection = () => {
           <div className="form-group mt-3">
             <textarea name="message" className="form-control" placeholder="Your Message" required></textarea>
           </div>
-          <button type="submit" className="btn btn-primary email-button mt-3">Email Me</button>
+          <button type="submit" variant="secondary" className="btn btn-secondary email-button mt-3">Email Me</button>
         </form>
       </div>
     </div>
