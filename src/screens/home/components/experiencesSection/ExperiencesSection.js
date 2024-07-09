@@ -1,123 +1,58 @@
 import React from 'react';
-import './ExperienceSection.css';
-
-const experiences = {
-  work: [
-    {
-      title: "Research & Development Summer Coop Student",
-      company: "Saferoads Engineering",
-      duration: "April 2020 – August 2022",
-      bulletPoints: [
-        "Contributed to the design and development of roadside safety products that save lives across the world",
-        "Conducted 45+ full-scale crash tests to collect data and test the effectiveness of various roadside safety products",
-        "Designed mechatronic devices, equipped with PCBs designed in Eagle, housings/fixtures designed in Solidworks, and powered by various types of microcontrollers, to safely and successfully conduct crash tests and record critical data",
-        "Developed software using Flutter for the front end and Python (Flask RESTful APIs) for the back end, to reduce the crash test data retrieval and processing time by about 90%",
-      ],
-    },
-    {
-      title: "Team Captain",
-      company: "Western Baja SAE",
-      duration: "Jun 2018 - Dec 2019",
-      bulletPoints: [
-        "Led the complete redesign, development, and manufacturing of Western Baja SAE’s first fully custom gearbox, first electronic continuously variable transmission, and first four-wheel drive car",
-        "Developed corporate sponsor relationships with major companies like Red Bull, Gene Haas, and Magna, increasing revenues by 114% (to $83k) in eight months",
-        "Increased team membership by over 86% (to 83) from the previous year",
-        "Facilitated change by actively providing opportunities to women in engineering increasing team gender diversity from 7% to 23%",
-        "Elected Project Fund Delegate by all Western Engineering teams to help distribute over $180k in funding to enable experiential learning for all Western Engineering students",
-        "Acted as Team Welder for the 21’/22’ season",
-      ],
-    },
-  ],
-  volunteer: [
-    {
-      title: "Founder",
-      company: "Impact Everyone",
-      duration: "September 2022 – June 2023",
-      bulletPoints: [
-        "Donated over $20k to animal sanctuaries, homeless shelters, charities, people in need and more",
-        "Led a team of nine people to achieve break-even in the first eight months",
-        "Developed partnerships with major brands, such as The Keg Steakhouse Bar and Grill, Food Basics, Home Hardware, United Canada, One Tree Planted and more",
-        "Developed business relationships with manufacturers in various parts of Asia",
-      ],
-    },
-  ],
-  education: [
-    {
-        title: "Master of in Electrical and Computer Engineering - Robotics and Control",
-        institution: "Western University",
-        duration: "2023 - Current",
-        bulletPoints: [
-            "ECE9069 - Hacking",
-            "ECE9156 - Topics of Autonomous Robots",
-            "ECE9039 - Machine Learning",
-            "ECE9047 - Sensor Networks and Embedded Systems",
-            "ECE9031 - Advanced Digital Signal Processing",
-            "ECE9021 - Digital Image Processing",
-            "ECE9014 - Data Management and Applications",
-        ],
-    },
-    {
-      title: "Bachelor of Engineering - Mechatronic Systems Engineering",
-      institution: "Western University",
-      duration: "2019 - 2023",
-      bulletPoints: [
-        "MSE4401 - Robotic Manipulators",
-        "ECE4469 - Applied Control Systems",
-        "MME4480 - Reverse Engineering",
-        "ECE4460 - Real-Time and Embedded Systems",
-      ],
-    },
-  ],
-};
+import { Container } from 'react-bootstrap';
+import ExpandableSection from './ExpandableSection'; // Adjust the import path accordingly
 
 const ExperiencesSection = () => {
   return (
-    <div className="container experiences-section">
-      <h2 className="text-center mb-4">Experience</h2>
+    <Container>
+      <h2>Educational Experience</h2>
+      <ExpandableSection
+        title="Master of Electrical and Computer Engineering"
+        location="Robotics and Control, Western University"
+        years="2023 - Current"
+      >
+        {/* Add any additional information here if needed */}
+      </ExpandableSection>
 
-      <h3 className="text-center mb-3">Work Experience</h3>
-      {experiences.work.map((experience, index) => (
-        <div key={index} className="experience-card mb-3">
-          <h4>{experience.title}</h4>
-          <h5>{experience.company}</h5>
-          <h6>{experience.duration}</h6>
-          <ul>
-            {experience.bulletPoints.map((point, idx) => (
-              <li key={idx}>{point}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
+      <ExpandableSection
+        title="Bachelor of Engineering"
+        location="Mechatronic Systems Engineering, Western University"
+        years="2019 - 2023"
+      >
+        {/* Add any additional information here if needed */}
+      </ExpandableSection>
 
-      <h3 className="text-center mb-3">Volunteer Experience</h3>
-      {experiences.volunteer.map((experience, index) => (
-        <div key={index} className="experience-card mb-3">
-          <h4>{experience.title}</h4>
-          <h5>{experience.company}</h5>
-          <h6>{experience.duration}</h6>
-          <ul>
-            {experience.bulletPoints.map((point, idx) => (
-              <li key={idx}>{point}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
+      <h2>Volunteer Experience</h2>
+      <ExpandableSection
+        title="Founder"
+        location="Impact Everyone"
+        years="September 2022 - June 2023"
+      >
+        <ul>
+          <li>Donated over $20k to animal sanctuaries, homeless shelters, charities, people in need and more.</li>
+          <li>Led a team of nine people to achieve break-even in the first eight months.</li>
+          <li>Developed partnerships with major brands, such as The Keg Steakhouse Bar and Grill, Food Basics, Home Hardware, United Canada, One Tree Planted, and more.</li>
+          <li>Developed business relationships with manufacturers in various parts of Asia.</li>
+        </ul>
+      </ExpandableSection>
 
-      <h3 className="text-center mb-3">Educational Experience</h3>
-      {experiences.education.map((experience, index) => (
-        <div key={index} className="experience-card mb-3">
-          <h4>{experience.title}</h4>
-          <h5>{experience.institution}</h5>
-          <h6>{experience.duration}</h6>
-          <h7>Advanced Course Work:</h7>
-          <ul>
-            {experience.bulletPoints.map((point, idx) => (
-              <li key={idx}>{point}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
+      <h2>Work Experience</h2>
+      <ExpandableSection
+        title="Team Captain"
+        location="Western Baja SAE"
+        years="Jun 2018 - Dec 2019"
+      >
+        {/* Add any additional information here if needed */}
+      </ExpandableSection>
+
+      <ExpandableSection
+        title="Research & Development Summer Coop Student"
+        location="SafeRoads Engineering"
+        years="April 2020 - August 2022"
+      >
+        {/* Add any additional information here if needed */}
+      </ExpandableSection>
+    </Container>
   );
 };
 
