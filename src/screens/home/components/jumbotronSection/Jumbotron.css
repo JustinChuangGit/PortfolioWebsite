@@ -65,7 +65,7 @@
 }
 
 .sub-title {
-  max-width: 60%; /* Adjust as needed for responsiveness */
+  max-width:50%; /* Adjust as needed for responsiveness */
   margin: 0 auto; /* Center the container */
   text-align: center; /* Center the text */
   margin-top: 2rem;

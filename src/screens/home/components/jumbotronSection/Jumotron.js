@@ -12,7 +12,7 @@ class Jumbotron extends Component {
         </div>
 
         <div className='sub-title'>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales at leo a porta. Suspendisse porta tellus lectus, iaculis vestibulum elit hendrerit ut...</p>
+          <p>I thrive on tackling cutting-edge projects, pushing boundaries, and thinking outside the box to create innovation solutions</p>
         </div>
       </div>
     );

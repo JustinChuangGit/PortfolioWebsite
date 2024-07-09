@@ -55,7 +55,7 @@ const SkillsSection = () => {
       <div className="container my-5">
         <h2 className="text-center skills-title">Skills</h2>
         <div className='skills-subtitle-container'>
-          <p className="text-center skills-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales at leo a porta. Suspendisse porta tellus lectus, iaculis vestibulum elit hendrerit ut...</p>
+          <p className="text-center skills-subtitle">With five years of experience in mechanical design, five years in software development, and four years in electrical design, I've honed a diverse skill set that drives my innovative projects! </p>
         </div>
         <div className="row">
           {skills.map(skill => (

@@ -106,7 +106,9 @@ const ProjectSection = () => {
         <div className='container d-flex flex-column align-items-center'>
             <h1 className='text-center mb-4'>Projects</h1>
             <div className='projectSection-subtitle'>
-                <p className='text-center mb-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales at leo a porta. Suspendisse porta tellus lectus, iaculis vestibulum elit hendrerit ut...</p>
+                <p className='text-center mb-4'>Below is a showcase of some of the exciting projects I've worked on over the past few years.
+
+</p>
             </div>
             <InputGroup className="mb-3">
                 <FormControl
