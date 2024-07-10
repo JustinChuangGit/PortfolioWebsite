@@ -1,0 +1,31 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    margin-bottom: 1rem; /* Add some space below the header */
+  }
+  
+  .header-container h3 {
+    display: inline-block;
+    border: 1px solid #fff; /* White border */
+    border-radius: 2rem; /* Border radius */
+    padding: 0.5rem 1rem; /* Minimal padding to fit the text */
+    font-size: 1rem;
+    background-color: #000; /* Match the background color to blend */
+    z-index: 1;
+    margin: 0; /* Remove default margin */
+  }
+  
+  .header-container hr {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    border-top: 2px solid #fff;
+    margin: 0; /* Remove default margin */
+    z-index: 0;
+  }
+  

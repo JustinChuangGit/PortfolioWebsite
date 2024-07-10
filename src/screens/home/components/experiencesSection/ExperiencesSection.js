@@ -1,11 +1,16 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import ExpandableSection from './ExpandableSection'; // Adjust the import path accordingly
+import './ExperiencesSection.css'; // Import the new CSS file
 
 const ExperiencesSection = () => {
   return (
     <Container>
-      <h2>Educational Experience</h2>
+        <h1 className='mt-5 mb-2'>Experiences</h1>
+      <div className="header-container">
+        <h3 className="bordered-header">Educational Experience</h3>
+        <hr />
+      </div>
       <ExpandableSection
         title="Master of Electrical and Computer Engineering"
         location="Robotics and Control, Western University"
@@ -22,7 +27,10 @@ const ExperiencesSection = () => {
         {/* Add any additional information here if needed */}
       </ExpandableSection>
 
-      <h2>Volunteer Experience</h2>
+      <div className="header-container">
+        <h3 className="bordered-header">Volunteer Experience</h3>
+        <hr />
+      </div>
       <ExpandableSection
         title="Founder"
         location="Impact Everyone"
@@ -36,7 +44,10 @@ const ExperiencesSection = () => {
         </ul>
       </ExpandableSection>
 
-      <h2>Work Experience</h2>
+      <div className="header-container">
+        <h3 className="bordered-header">Work Experience</h3>
+        <hr />
+      </div>
       <ExpandableSection
         title="Team Captain"
         location="Western Baja SAE"
