@@ -50,8 +50,9 @@ const ExperiencesSection = () => {
       <ExpandableSection
         title="Founder"
         location="Impact Everyone"
-        years="September 2022 - June 2023"
+        years="2020 - 2022"
       >
+        <p>We sell reusable water bottles and partner with companies like The Keg, Home Hardware, One Tree Planted and more, to donate money and supplies to charitable initiatives that need it most. Let’s make an impact together!</p>
         <ul>
             <li>Donated over $20k to animal sanctuaries, homeless shelters, charities, people in need and more</li>
             <li>Led a team of nine people to achieve break-even in the first eight months</li>
@@ -67,8 +68,9 @@ const ExperiencesSection = () => {
       <ExpandableSection
         title="Team Captain"
         location="Western Baja SAE"
-        years="Jun 2018 - Dec 2019"
+        years="2022 - 2023"
       >
+        <p>Western Baja SAE is an engineering team that designs and manufactures an off-road vehicle. We compete with teams all across the world and provide students with an experiential learning experience that cannot be achieved in a classroom.</p>
         <ul>
             <li>Leading the development and manufacturing of Western Baja SAE’s first fully custom gearbox, first electronic continuously variable transmission, and first four-wheel drive car</li>
             <li>Developed corporate sponsor relationships with major companies like Red Bull, Gene Haas, and Magna, increasing revenues by 114% (to $83k) in eight months</li>
@@ -82,8 +84,10 @@ const ExperiencesSection = () => {
       <ExpandableSection
         title="Research & Development Summer Coop Student"
         location="SafeRoads Engineering"
-        years="April 2020 - August 2022"
+        years="2020 - 2022"
       >
+
+        <p>Working to make roads safer by crash testing roadside safety products and developing new safety products. </p>
         <ul>
             <li>Collaborated with industry experts to develop creative roadside safety products that save lives worldwide</li>
             <li>Conducted 45+ full scale crash tests to collect data and test the effectiveness of various roadside safety products</li>
