@@ -21,7 +21,7 @@ const ExpandableSection = ({ title, location, years, children }) => {
       </div>
       <Collapse in={open}>
         <div id="collapse-content" className="collapse-content">
-          <Card.Body className='experiences-body-info'>
+          <Card.Body className=''>
             {children}
           </Card.Body>
         </div>
