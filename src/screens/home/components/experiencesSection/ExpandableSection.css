@@ -1,3 +1,4 @@
+
 .expandable-section {
   background-color: #000; /* Replace with your preferred background color */
   color: #fff; /* Replace with your preferred text color */
@@ -44,12 +45,15 @@
 
 .material-symbols-outlined {
   margin-left: 10px; /* Adjust spacing as needed */
-  font-size: 2rem;
-  margin-top: 0.2rem; /* Adjust the size of the icon here */
+  font-size: 2rem; /* Adjust the size of the icon here */
+  margin-top: 0.2rem; /* Adjust the spacing to center the icon vertically */
 }
 
 .collapse-content {
   padding-top: 10px;
+  background-color: #000; /* Match this to your preferred background color */
+  color: #fff; /* Ensure text color is still readable */
+  font-family: 'Onest', sans-serif; /* Apply the Onest font family */
 }
 
 .card {
