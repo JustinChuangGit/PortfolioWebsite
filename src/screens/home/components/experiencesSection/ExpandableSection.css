@@ -12,73 +12,40 @@
 
 .section-header {
   display: flex;
-  justify-content: space-between;.expandable-section {
-    background-color: #000; /* Replace with your preferred background color */
-    color: #fff; /* Replace with your preferred text color */
-    padding: 15px;
-    cursor: pointer;
-    border: none; /* Remove border */
-  }
-  
-  .expandable-section:hover {
-    background-color: #222; /* Optional: Add a hover effect */
-  }
-  
-  .section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 18px;
-  }
-  
-  .section-title-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  
-  .section-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .section-location {
-    font-size: 14px;
-    color: #ccc; /* Replace with your preferred color for the location */
-    margin: 0;
-  }
-  
-  .section-years {
-    font-size: 18px;
-    font-weight: normal;
-  }
-  
-  .collapse-content {
-    padding-top: 10px;
-  }
-  
-  .card {
-    border: none; /* Ensure Card has no border */
-  }
-  
+  justify-content: space-between;
   align-items: center;
   font-size: 18px;
+}
+
+.section-title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .section-title {
   font-size: 24px;
   font-weight: bold;
+  margin: 0;
 }
 
 .section-location {
   font-size: 14px;
   color: #ccc; /* Replace with your preferred color for the location */
+  margin: 0;
 }
 
 .section-years {
+  display: flex;
+  align-items: center;
   font-size: 18px;
   font-weight: normal;
+}
+
+.material-symbols-outlined {
+  margin-left: 10px; /* Adjust spacing as needed */
+  font-size: 2rem;
+  margin-top: 0.2rem; /* Adjust the size of the icon here */
 }
 
 .collapse-content {

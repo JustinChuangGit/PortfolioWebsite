@@ -9,11 +9,14 @@ const ExpandableSection = ({ title, location, years, children }) => {
     <Card className="mb-3" style={{ border: 'none' }}>
       <div className="expandable-section" onClick={() => setOpen(!open)}>
         <div className="section-header">
-          <div className="section-title-container">
-            <div className="section-title text-start">{title}</div>
-            <div className="section-location text-start">{location}</div>
+          <div className="section-title-container text-start">
+            <div className="section-title">{title}</div>
+            <div className="section-location">{location}</div>
           </div>
-          <div className="section-years">{years}</div>
+          <div className="section-years">
+            {years}
+            <span className="material-symbols-outlined">{open ? 'remove_circle' : 'add_circle'}</span>
+          </div>
         </div>
       </div>
       <Collapse in={open}>
