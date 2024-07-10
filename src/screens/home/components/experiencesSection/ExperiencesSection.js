@@ -12,19 +12,35 @@ const ExperiencesSection = () => {
         <hr />
       </div>
       <ExpandableSection
-        title="Master of Electrical and Computer Engineering"
-        location="Robotics and Control, Western University"
+        title="Master of Engineering - Robotics and Control"
+        location="Western University"
         years="2023 - Current"
       >
-        {/* Add any additional information here if needed */}
+        <h4>Relevant Courses:</h4>
+        <ul>
+            <li>ECE4460 - Real Time & Embedded Systems</li>
+            <li>ECE4469 - Applied Control Systems</li>
+            <li>MSE4401 - Robotic Manipulators</li>
+        </ul>
+
       </ExpandableSection>
 
       <ExpandableSection
-        title="Bachelor of Engineering"
-        location="Mechatronic Systems Engineering, Western University"
+        title="Bachelor of Engineering - Mechatronic Systems"
+        location="Western University"
         years="2019 - 2023"
       >
-        {/* Add any additional information here if needed */}
+        <h4>Relevant Courses:</h4>
+        <ul>
+            <li>ECE9039 - Machine Learning</li>
+            <li>ECE9047 - Sensor Networks & Embedded Systems</li>
+            <li>ECE9069 - Hacking</li>
+            <li>ECE9156 - Autonomous Robotics</li>
+            <li>ECE9021 - Image Processing</li>
+            <li>ECE9031 - Advanced Digital Signal Processing</li>
+            <li>ECE9014 - Data Management & application</li>
+        </ul>
+
       </ExpandableSection>
 
       <div className="header-container">
@@ -37,10 +53,10 @@ const ExperiencesSection = () => {
         years="September 2022 - June 2023"
       >
         <ul>
-          <li>Donated over $20k to animal sanctuaries, homeless shelters, charities, people in need and more.</li>
-          <li>Led a team of nine people to achieve break-even in the first eight months.</li>
-          <li>Developed partnerships with major brands, such as The Keg Steakhouse Bar and Grill, Food Basics, Home Hardware, United Canada, One Tree Planted, and more.</li>
-          <li>Developed business relationships with manufacturers in various parts of Asia.</li>
+            <li>Donated over $20k to animal sanctuaries, homeless shelters, charities, people in need and more</li>
+            <li>Led a team of nine people to achieve break-even in the first eight months</li>
+            <li>Developed partnerships with major brands, such as The Keg Steakhouse Bar and Grill, Food Basics, Home Hardware, United Canada, One Tree Planted and more</li>
+            <li>Developed business relationships with manufacturers in various parts of Asia</li>
         </ul>
       </ExpandableSection>
 
@@ -53,7 +69,14 @@ const ExperiencesSection = () => {
         location="Western Baja SAE"
         years="Jun 2018 - Dec 2019"
       >
-        {/* Add any additional information here if needed */}
+        <ul>
+            <li>Leading the development and manufacturing of Western Baja SAE’s first fully custom gearbox, first electronic continuously variable transmission, and first four-wheel drive car</li>
+            <li>Developed corporate sponsor relationships with major companies like Red Bull, Gene Haas, and Magna, increasing revenues by 114% (to $83k) in eight months</li>
+            <li>Increased team membership by over 84% (to 83) from the previous year</li>
+            <li>Facilitated change by actively providing opportunities to women in engineering increasing team gender diversity from 7% to 23%</li>
+            <li>Elected Project Fund Delegate by all Western Engineering Teams to help distribute over $180k in funding to enable experiential learning for all clubs and teams within the faculty</li>
+        </ul>
+
       </ExpandableSection>
 
       <ExpandableSection
@@ -61,7 +84,15 @@ const ExperiencesSection = () => {
         location="SafeRoads Engineering"
         years="April 2020 - August 2022"
       >
-        {/* Add any additional information here if needed */}
+        <ul>
+            <li>Collaborated with industry experts to develop creative roadside safety products that save lives worldwide</li>
+            <li>Conducted 45+ full scale crash tests to collect data and test the effectiveness of various roadside safety products</li>
+            <li>Worked with the Ontario Provincial Police to help facilitate and provide expert advice with forensic crash testing</li>
+            <li>Prepared and instrumented crash vehicles with highly technical equipment</li>
+            <li>Developed mechatronic systems to safely and successfully conduct crash tests</li>
+            <li>Developed software with Flutter and Python to reduce the crash test data retrieval and processing time by about 90%</li>
+        </ul>
+
       </ExpandableSection>
     </Container>
   );
