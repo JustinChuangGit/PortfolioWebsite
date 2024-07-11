@@ -61,6 +61,9 @@ const ExperiencesSection = () => {
             <li>Developed partnerships with major brands, such as The Keg Steakhouse Bar and Grill, Food Basics, Home Hardware, United Canada, One Tree Planted and more</li>
             <li>Developed business relationships with manufacturers in various parts of Asia</li>
           </ul>
+          <div className='media'>
+            <MediaSlider folder="Experiences/Impact" />
+          </div>
         </div>
       </ExpandableSection>
 

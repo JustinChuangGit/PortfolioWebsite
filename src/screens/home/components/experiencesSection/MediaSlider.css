@@ -6,7 +6,7 @@
 .media-container {
     position: relative;
     width: 100%;
-    min-height: 400px; /* Ensure a minimum height */
+    min-height: 300px; /* Ensure a minimum height */
     height: auto; /* Allow the height to adjust as needed */
     overflow: hidden;
 }
