@@ -1,7 +1,7 @@
 :root {
   --border-radius-unclicked: 20px;
   --border-radius-clicked: 0px;
-  --default-color: #1a1a1a;
+  --default-color: #4a4a4a;
   --selected-color: #4a4a4a; /* Example color for selected tab */
 }
 
