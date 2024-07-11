@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import { ref, listAll, getDownloadURL } from 'firebase/storage';
-import { storage } from '../../../../services/firebase.js'; // Adjust the import path accordingly
+import { storage } from '../../../../services/firebase'; // Adjust the import path accordingly
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import './MediaSlider.css'; // Import the new CSS file
@@ -45,25 +45,27 @@ const MediaSlider = ({ folder }) => {
   };
 
   return (
-    <Slider {...settings}>
-      {mediaUrls.map((url, index) => {
-        const extension = getFileExtension(url);
-        return (
-          <div key={index} className="media-container">
-            {['jpeg', 'jpg', 'gif', 'png', 'bmp', 'svg'].includes(extension) ? (
-              <img src={url} alt={`media-${index}`} className="media-item" />
-            ) : ['mp4', 'webm', 'ogv'].includes(extension) ? (
-              <video controls className="media-item">
-                <source src={url} type={`video/${extension}`} />
-                Your browser does not support the video tag.
-              </video>
-            ) : (
-              <p>Unsupported file type: {url}</p>
-            )}
-          </div>
-        );
-      })}
-    </Slider>
+    <div className="media-slider-container">
+      <Slider {...settings}>
+        {mediaUrls.map((url, index) => {
+          const extension = getFileExtension(url);
+          return (
+            <div key={index} className="media-container">
+              {['jpeg', 'jpg', 'gif', 'png', 'bmp', 'svg'].includes(extension) ? (
+                <img src={url} alt={`media-${index}`} className="media-item" />
+              ) : ['mp4', 'webm', 'ogv'].includes(extension) ? (
+                <video controls className="media-item">
+                  <source src={url} type={`video/${extension}`} />
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <p>Unsupported file type: {url}</p>
+              )}
+            </div>
+          );
+        })}
+      </Slider>
+    </div>
   );
 };
 
