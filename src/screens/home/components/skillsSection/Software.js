@@ -50,10 +50,10 @@ const Software = () => {
       style={{ backgroundColor: software_background }}
     >
         <div className='custom-padding col-12 text-start'>
-            <p>I began my journey into programming during my first year of undergrad, where I was introduced to Java. My interest in software took a significant leap during my first internship, which required me to program an Arduino for a data collection device I was developing. This experience led me to delve into embedded programming, exploring peripherals, memory management, and more, using C/C++ on embedded devices.</p>
-            <p>Eager to expand my software skills, I undertook a challenging project at work to develop a web app for processing accelerometer data. I taught myself web app development, focusing on integrating a backend system with an engaging user interface. This newfound knowledge paved the way for me to explore mobile app development.</p>
-            <p>Throughout my university career, I extensively used MATLAB for a variety of data processing and visualization tasks. My projects ranged from implementing particle filters and Extended Kalman Filter SLAM algorithms to conducting sophisticated audio and image processing. Each challenge not only sharpened my technical skills but also deepened my passion for software engineering.</p>
-        
+            <p>
+            I began programming in my first year of undergrad with Java. My interest grew during an internship where I programmed an Arduino for a data collection device, leading me to explore embedded programming with C/C++.</p>
+            <p>At work, I developed a web app for accelerometer data, teaching myself web development and integrating a backend system. This led me to explore mobile app development.</p>
+            <p>In university, I used MATLAB for data processing and visualization, tackling projects like particle filters and SLAM algorithms. Each challenge sharpened my skills and deepened my passion for software engineering.</p>
             <div class="container">
             <div class="row mt-5">
                 <div class="col-md-6 col-12 d-flex  justify-content-center">

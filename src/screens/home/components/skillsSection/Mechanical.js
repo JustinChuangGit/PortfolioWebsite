@@ -44,10 +44,8 @@ const Mechanical = () => {
       style={{ backgroundColor: mechanical_background }}
     >
       <div className='custom-padding col-12 text-start'>
-        <p>From a young age, I was immersed in the world of hands-on construction and engineering, thanks to my stepdad's career as a contractor. My early years were spent constructing wooden structures, which sparked a lifelong passion for building and mechanics. By the age of twelve, I was already dismantling and rebuilding small engines, from line trimmers to chainsaws.</p>
-        <p>This mechanical curiosity escalated when I acquired a dirt bike in high school. After experiencing a complete engine failure, I seized the opportunity to deepen my understanding of motorcycle engines through a meticulous rebuild. This hands-on experience was invaluable, laying a solid foundation for my mechanical skills.</p>
-        <p>My first internship was a turning point, introducing me to CAD technology. I quickly adapted, teaching myself SolidWorks and transforming abstract ideas into tangible models. Over the past four years, I've developed a robust skill set in CAD, Simulation, Motion Studies, Surfaces, 3D printing, and CAM, allowing me to expertly navigate from concept to execution. </p>
-
+        <p>From a young age, I was drawn to construction and engineering, influenced by my stepdad's work as a contractor. Building wooden structures sparked my passion, and by twelve, I was already rebuilding small engines.</p>
+        <p>This curiosity grew in high school when I rebuilt a dirt bike engine after a failure, solidifying my mechanical skills. My first internship introduced me to CAD technology, where I taught myself SolidWorks and turned ideas into models. Over four years, I've honed skills in CAD, Simulation, Motion Studies, 3D printing, and CAM, seamlessly navigating from concept to execution.</p>
         <div class="container mt-4">
           <div class="row">
               <div class="col-lg-4 col-md-6 col-12 d-flex justify-content-center align-items-start mb-3">
