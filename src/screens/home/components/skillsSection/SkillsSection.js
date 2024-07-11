@@ -5,12 +5,11 @@ import './SkillSection.css';
 import Mechanical from './Mechanical';
 import Electrical from './Electrical';
 import Software from './Software';
-import { electrical_background, mechanical_background, software_background } from '../constants';
 import { AnimatePresence } from 'framer-motion';
 
-import mechanicalSkillsLogo from '../../../../assets/images/mechanicalSkillsIcon.png'
-import electricalSkillsLogo from '../../../../assets/images/ElectricalSkillsIcon.png'
-import softwareSkillsLogo from '../../../../assets/images/SoftwareSkillsIcon.png'
+import mechanicalSkillsLogo from '../../../../assets/images/mechanicalSkillsIcon.png';
+import electricalSkillsLogo from '../../../../assets/images/ElectricalSkillsIcon.png';
+import softwareSkillsLogo from '../../../../assets/images/SoftwareSkillsIcon.png';
 
 const SkillsSection = () => {
   const skillComponents = {
@@ -20,9 +19,9 @@ const SkillsSection = () => {
   };
 
   const initialSkills = [
-    { id: 'mechanical', name: 'Mechanical Engineering', color: mechanical_background, icon: mechanicalSkillsLogo },
-    { id: 'electrical', name: 'Electrical Engineering', color: electrical_background, icon: electricalSkillsLogo },
-    { id: 'software', name: 'Software Engineering', color: software_background, icon: softwareSkillsLogo },
+    { id: 'mechanical', name: 'Mechanical Engineering', color: '#e74c3c', icon: mechanicalSkillsLogo }, // Example color
+    { id: 'electrical', name: 'Electrical Engineering', color: '#3498db', icon: electricalSkillsLogo }, // Example color
+    { id: 'software', name: 'Software Engineering', color: '#2ecc71', icon: softwareSkillsLogo }, // Example color
   ];
 
   const [skills, setSkills] = useState(initialSkills);
@@ -55,7 +54,7 @@ const SkillsSection = () => {
       <div className="container my-5">
         <h2 className="text-center skills-title">Skills</h2>
         <div className='skills-subtitle-container'>
-          <p className="text-center skills-subtitle">With five years of experience in mechanical design, five years in software development, and four years in electrical design, I've honed a diverse skill set that drives my innovative projects! </p>
+          <p className="text-center skills-subtitle">With five years of experience in mechanical design, five years in software development, and four years in electrical design, I've honed a diverse skill set that drives my innovative projects!</p>
         </div>
         <div className="row">
           {skills.map(skill => (
@@ -64,7 +63,7 @@ const SkillsSection = () => {
                 <div
                   className={`p-3 text-white skill-box mt-3 ${selectedSkillId === skill.id ? 'selected' : 'not-selected'}`}
                   onClick={() => handleSkillClick(skill)}
-                  style={{ backgroundColor: skill.color }}
+                  style={{ backgroundColor: selectedSkillId === skill.id ? skill.color : '#1a1a1a' }} // Change selected color as needed
                 >
                   <div className="icon-text-container">
                     <img src={skill.icon} alt="icon" className="title-icon" />
