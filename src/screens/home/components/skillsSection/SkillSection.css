@@ -2,6 +2,7 @@
   --border-radius-unclicked: 20px;
   --border-radius-clicked: 0px;
   --default-color: #1a1a1a;
+  --selected-color: #4a4a4a; /* Example color for selected tab */
 }
 
 .skills-title {
@@ -33,7 +34,11 @@ transition: background-color 0.3s ease; /* Add transition for background color *
 .skill-box.not-selected {
 border-bottom-left-radius: var(--border-radius-unclicked);
 border-bottom-right-radius: var(--border-radius-unclicked);
-transition: border-bottom-left-radius 0.3s ease, border-bottom-right-radius 0.5s ease, 0.5s;
+transition: 
+  border-bottom-left-radius 0.3s ease, 
+  border-bottom-right-radius 0.5s ease, 
+  height 0.5s ease,
+  background-color 0.5s ease 1s; /* Delay added here for background color transition */
 }
 
 .skill-box.selected {
@@ -44,6 +49,7 @@ transition:
   border-bottom-right-radius 0.5s ease 0.5s, /* 0.2s delay added here */
   height 0.5s ease; /* Ensure this does not have a delay if not needed */
 height: 105%;
+background-color: var(--selected-color); /* Set the background color for the selected tab */
 animation: growFromTopDown 0.5s ease;
 }
 
