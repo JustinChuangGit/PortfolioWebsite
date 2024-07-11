@@ -31,8 +31,15 @@
 
 .flex-container {
     display: flex;
+    flex-direction: column; /* Default to column layout */
     justify-content: space-between;
     align-items: flex-start; /* Align items to the start */
+}
+
+@media (min-width: 768px) {
+    .flex-container {
+        flex-direction: row; /* Switch to row layout on medium and larger screens */
+    }
 }
 
 .flex-container ul {
@@ -42,8 +49,14 @@
 
 .media {
     flex: 1;
-    width: 50%; /* Adjust the width as needed */
-    height: 300px; /* Adjust the height as needed */
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Adjust the height as needed */
     padding-left: 1rem;
 }
 
+@media (min-width: 768px) {
+    .media {
+        width: 50%; /* Adjust the width as needed */
+        height: 300px; /* Adjust the height as needed */
+    }
+}

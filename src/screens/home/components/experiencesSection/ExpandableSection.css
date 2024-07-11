@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-
 .expandable-section {
   background-color: #000; /* Replace with your preferred background color */
   color: #fff; /* Replace with your preferred text color */
@@ -26,6 +25,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  flex-grow: 1;
 }
 
 .section-title {
@@ -34,33 +34,61 @@
   margin: 0;
 }
 
+.section-location-years {
+  display: flex;
+  flex-direction: column;
+}
+
 .section-location {
   font-size: 14px;
   color: #ccc; /* Replace with your preferred color for the location */
   margin: 0;
 }
 
-.section-years {
+.section-years-mobile {
+  font-size: 14px;
+  color: #ccc; /* Replace with your preferred color */
+  display: block;
+  margin-top: 5px;
+}
+
+.section-years-icon {
   display: flex;
   align-items: center;
-  font-size: 18px;
-  font-weight: normal;
+}
+
+.section-years-desktop {
+  display: none;
+  margin-right: 10px; /* Add some space between the years and the icon */
 }
 
 .material-symbols-outlined {
-  margin-left: 10px; /* Adjust spacing as needed */
   font-size: 2rem; /* Adjust the size of the icon here */
-  margin-top: 0.2rem; /* Adjust the spacing to center the icon vertically */
 }
 
 .collapse-content {
   padding-top: 10px;
   background-color: #000; /* Match this to your preferred background color */
   color: #fff; /* Ensure text color is still readable */
-  font-family: 'Onest', sans-serif; /* Apply the Onest font family */
+  font-family: 'Montserrat', sans-serif; /* Apply the Montserrat font family */
   text-align: start;
 }
 
 .card {
   border: none; /* Ensure Card has no border */
+}
+
+@media (min-width: 768px) {
+  .section-location-years {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .section-years-mobile {
+    display: none;
+  }
+
+  .section-years-desktop {
+    display: block;
+  }
 }

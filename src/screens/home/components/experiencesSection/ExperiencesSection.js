@@ -7,7 +7,7 @@ import './ExperiencesSection.css'; // Import the new CSS file
 const ExperiencesSection = () => {
   return (
     <Container>
-      <h1 className='mt-5 mb-2'>Experiences</h1>
+      <h1 className='mt-5 mb-5'>Experiences</h1>
       <div className="header-container">
         <h3 className="bordered-header">Educational Experience</h3>
         <hr />
@@ -23,9 +23,6 @@ const ExperiencesSection = () => {
             <li>ECE4469 - Applied Control Systems</li>
             <li>MSE4401 - Robotic Manipulators</li>
           </ul>
-          <div className='media'>
-            <MediaSlider folder="Experiences/Master" />
-          </div>
         </div>
       </ExpandableSection>
 
@@ -44,9 +41,6 @@ const ExperiencesSection = () => {
             <li>ECE9031 - Advanced Digital Signal Processing</li>
             <li>ECE9014 - Data Management & application</li>
           </ul>
-          <div className='media'>
-            <MediaSlider folder="Experiences/Bachelor" />
-          </div>
         </div>
       </ExpandableSection>
 
@@ -67,9 +61,6 @@ const ExperiencesSection = () => {
             <li>Developed partnerships with major brands, such as The Keg Steakhouse Bar and Grill, Food Basics, Home Hardware, United Canada, One Tree Planted and more</li>
             <li>Developed business relationships with manufacturers in various parts of Asia</li>
           </ul>
-          <div className='media'>
-            <MediaSlider folder="Experiences/Impact" />
-          </div>
         </div>
       </ExpandableSection>
 
