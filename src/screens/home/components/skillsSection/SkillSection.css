@@ -1,196 +1,450 @@
 :root {
-  --border-radius-unclicked: 20px;
-  --border-radius-clicked: 0px;
-  --default-color: #1a1a1a;
-  --selected-color: #4a4a4a; /* Example color for selected tab */
+    --border-radius-unclicked: 20px;
+    --border-radius-clicked: 0px;
+    --default-color: #1a1a1a;
+    --selected-color: #4a4a4a; /* Example color for selected tab */
 }
 
 .skills-title {
-font-weight: 700;
-font-size: 3rem;
+  font-weight: 700;
+  font-size: 3rem;
 }
 
 .skills-subtitle {
-color: #B0B0B0;
-font-size: 1rem;
+  color: #B0B0B0;
+  font-size: 1rem;
 }
 
 .skills-subtitle-container {
-margin: 0 auto;
-margin-top: 1rem;
-margin-bottom: 1rem;
-width: 60%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 60%;
 }
 
 .skill-box {
-cursor: pointer;
-border-top-Right-Radius: var(--border-radius-unclicked);
-border-top-left-radius: var(--border-radius-unclicked);
-width: 100%;
-background-color: var(--default-color); /* Set the default background color */
-transition: background-color 0.3s ease; /* Add transition for background color */
+  cursor: pointer;
+  border-top-Right-Radius: var(--border-radius-unclicked);
+  border-top-left-radius: var(--border-radius-unclicked);
+  width: 100%;
+  background-color: var(--default-color); /* Set the default background color */
+  transition: background-color 0.3s ease; /* Add transition for background color */
 }
 
 .skill-box.not-selected {
-border-bottom-left-radius: var(--border-radius-unclicked);
-border-bottom-right-radius: var(--border-radius-unclicked);
-transition: 
-  border-bottom-left-radius 0.3s ease, 
-  border-bottom-right-radius 0.5s ease, 
-  height 0.5s ease,
-  background-color 0.5s ease 1s; /* Delay added here for background color transition */
+  border-bottom-left-radius: var(--border-radius-unclicked);
+  border-bottom-right-radius: var(--border-radius-unclicked);
+  transition: 
+    border-bottom-left-radius 0.3s ease, 
+    border-bottom-right-radius 0.5s ease, 
+    height 0.5s ease,
+    background-color 0.3s ease 0.5s; /* Delay added here for background color transition */
 }
 
 .skill-box.selected {
-border-bottom-left-radius: var(--border-radius-clicked);
-border-bottom-right-radius: var(--border-radius-clicked);
-transition: 
-  border-bottom-left-radius 0.3s ease 0.5s, /* 0.2s delay added here */
-  border-bottom-right-radius 0.5s ease 0.5s, /* 0.2s delay added here */
-  height 0.5s ease; /* Ensure this does not have a delay if not needed */
-height: 105%;
-background-color: var(--selected-color); /* Set the background color for the selected tab */
-animation: growFromTopDown 0.5s ease;
+  border-bottom-left-radius: var(--border-radius-clicked);
+  border-bottom-right-radius: var(--border-radius-clicked);
+  transition: 
+    border-bottom-left-radius 0.3s ease 0.5s, /* 0.2s delay added here */
+    border-bottom-right-radius 0.5s ease 0.5s, /* 0.2s delay added here */
+    height 0.5s ease; /* Ensure this does not have a delay if not needed */
+  height: 105%;
+  background-color: var(--selected-color); /* Set the background color for the selected tab */
+  animation: growFromTopDown 0.5s ease;
 }
 
 @keyframes growFromTopDown {
-0% {
-  height: 0; /* Start with height of 0 */
-}
-100% {
-  height: 100%; /* Expand to full height */
-}
+  0% {
+    height: 0; /* Start with height of 0 */
+  }
+  100% {
+    height: 100%; /* Expand to full height */
+  }
 }
 
 .skill-description {
-width: auto; /* Ensure description takes up 100% of its parent */
-overflow: hidden; /* Hide overflow */
-border-bottom-left-radius: var(--border-radius-unclicked);
-border-bottom-right-radius: var(--border-radius-unclicked);
-margin-right: 0.75rem;
-margin-left: 0.75rem;
+  width: auto; /* Ensure description takes up 100% of its parent */
+  overflow: hidden; /* Hide overflow */
+  border-bottom-left-radius: var(--border-radius-unclicked);
+  border-bottom-right-radius: var(--border-radius-unclicked);
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
 }
 
 .skills-category-header {
-display: flex;
-align-items: center; /* Center vertically */
-margin-bottom: 1rem;
+  display: flex;
+  align-items: center; /* Center vertically */
+  margin-bottom: 1rem;
 }
 
 .skills-category-header .icon {
-margin-right: 0.5rem; /* Add space between icon and text */
+  margin-right: 0.5rem; /* Add space between icon and text */
 }
 
 .logo {
-margin-top: 0.25rem;
+  margin-top: 0.25rem;
 }
 
 .custom-list {
-list-style: none; /* Remove default bullets */
-padding-left: 0; /* Remove default padding */
-font-family: 'Onest', sans-serif;
-font-weight: 400; /* Adjust the weight if necessary */
-font-size: 0.85rem;
+  list-style: none; /* Remove default bullets */
+  padding-left: 0; /* Remove default padding */
+  font-family: 'Onest', sans-serif;
+  font-weight: 400; /* Adjust the weight if necessary */
+  font-size: 0.85rem;
 }
 
 .custom-list li {
-position: relative; /* Required for positioning the icon */
-padding-left: 30px; /* Adjust based on icon size */
-margin-bottom: 10px; /* Adjust spacing between list items */
+  position: relative; /* Required for positioning the icon */
+  padding-left: 30px; /* Adjust based on icon size */
+  margin-bottom: 10px; /* Adjust spacing between list items */
 }
 
 .custom-list li::before {
-content: '';
-position: absolute;
-left: 0;
-top: 50%;
-transform: translateY(-50%);
-width: 20px; /* Adjust based on icon size */
-height: 20px; /* Adjust based on icon size */
-background: url('../../../../assets/images/checkIcon.png') no-repeat center center;
-background-size: contain;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px; /* Adjust based on icon size */
+  height: 20px; /* Adjust based on icon size */
+  background: url('../../../../assets/images/checkIcon.png') no-repeat center center;
+  background-size: contain;
 }
 
 .title-icon {
-width: 1.5rem; /* Adjust size as needed */
-height: auto;
-margin-right: 10px; /* Adjust space between icon and text */
+  width: 1.5rem; /* Adjust size as needed */
+  height: auto;
+  margin-right: 10px; /* Adjust space between icon and text */
 }
 
 .icon-text-container {
-display: flex;
-align-items: center; /* Vertically center the items */
-justify-content: center; /* Horizontally center the items */
+  display: flex;
+  align-items: center; /* Vertically center the items */
+  justify-content: center; /* Horizontally center the items */
 }
 
 .skill-badges {
-display: flex;
-flex-wrap: wrap; /* Allow badges to wrap to the next line if they don't fit */
-justify-content: center; /* Center the badges horizontally */
-margin-top: 10px; /* Add some space between the badges and other content */
+  display: flex;
+  flex-wrap: wrap; /* Allow badges to wrap to the next line if they don't fit */
+  justify-content: center; /* Center the badges horizontally */
+  margin-top: 10px; /* Add some space between the badges and other content */
 }
 
 .badge {
-background-color: #ffffff; /* Change this color to your desired background color */
-color: black; /* Change the text color if needed */
-padding: 5px 10px; /* Adjust padding for badges */
-margin: 5px; /* Add space between badges */
-border-radius: 12px; /* Add rounded corners */
-display: inline-block; /* Ensure badges are inline-block elements */
-font-family: 'Onest', sans-serif;
-padding: 0.5rem 1rem;
+  background-color: #ffffff; /* Change this color to your desired background color */
+  color: black; /* Change the text color if needed */
+  padding: 5px 10px; /* Adjust padding for badges */
+  margin: 5px; /* Add space between badges */
+  border-radius: 12px; /* Add rounded corners */
+  display: inline-block; /* Ensure badges are inline-block elements */
+  font-family: 'Onest', sans-serif;
+  padding: 0.5rem 1rem;
 }
 
 .software-logos {
-margin-left: 1.8rem;
+  margin-left: 1.8rem;
 }
 
 .logo-electrical {
-height: 7rem; /* Adjust the size as needed */
-width: auto;
-margin: 1rem; /* Adjust the spacing between logos */
+  height: 7rem; /* Adjust the size as needed */
+  width: auto;
+  margin: 1rem; /* Adjust the spacing between logos */
 }
 
 .logo-language {
-height: 4rem; /* Adjust the size as needed */
-width: auto;
-margin: 1rem; /* Adjust the spacing between logos */
+  height: 4rem; /* Adjust the size as needed */
+  width: auto;
+  margin: 1rem; /* Adjust the spacing between logos */
 }
 
 .logo-framework {
-height: 4rem; /* Adjust the size as needed */
-width: auto;
-margin: 1rem; /* Adjust the spacing between logos */
+  height: 4rem; /* Adjust the size as needed */
+  width: auto;
+  margin: 1rem; /* Adjust the spacing between logos */
 }
 
 @media (max-width: 768px) {
-.logo-electrical {
-  height: 5rem; /* Adjust size for smaller screens */
-  margin: 0.5rem; /* Adjust spacing for smaller screens */
-}
-.logo-language {
-  height: 5rem; /* Adjust the size as needed */
-  margin: 1rem; /* Adjust the spacing between logos */
-}
-.logo-framework {
-  height: 4rem; /* Adjust the size as needed */
-  width: auto;
-  margin: 1rem; /* Adjust the spacing between logos */
-}
+  .skills-subtitle-container {
+    width: 80%; /* Make subtitle container wider on smaller screens */
+  }
+
+  .logo-electrical {
+    height: 5rem; /* Adjust size for smaller screens */
+    margin: 0.5rem; /* Adjust spacing for smaller screens */
+  }
+  .logo-language {
+    height: 5rem; /* Adjust the size as needed */
+    margin: 1rem; /* Adjust the spacing between logos */
+  }
+  .logo-framework {
+    height: 4rem; /* Adjust the size as needed */
+    width: auto;
+    margin: 1rem; /* Adjust the spacing between logos */
+  }
+
+  .skill-description {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .custom-list li {
+    padding-left: 20px; /* Adjust padding for smaller screens */
+  }
 }
 
 @media (max-width: 480px) {
-.logo-electrical {
-  height: 4rem; /* Adjust size for very small screens */
-  margin: 0.5rem; /* Adjust spacing for very small screens */
+  .skills-subtitle-container {
+    width: 90%; /* Make subtitle container wider on very small screens */
+  }:root {
+    --border-radius-unclicked: 20px;
+    --border-radius-clicked: 0px;
+    --default-color: #1a1a1a;
+    --selected-color: #4a4a4a; /* Example color for selected tab */
 }
-.logo-language {
-  height: 4rem; /* Adjust the size as needed */
+
+.skills-title {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.skills-subtitle {
+  color: #B0B0B0;
+  font-size: 1rem;
+}
+
+.skills-subtitle-container {
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 60%;
+}
+
+.skill-box {
+  cursor: pointer;
+  border-top-right-radius: var(--border-radius-unclicked);
+  border-top-left-radius: var(--border-radius-unclicked);
+  width: 100%;
+  background-color: var(--default-color); /* Set the default background color */
+  transition: background-color 0.3s ease; /* Add transition for background color */
+}
+
+.skill-box.not-selected {
+  border-bottom-left-radius: var(--border-radius-unclicked);
+  border-bottom-right-radius: var(--border-radius-unclicked);
+  transition: 
+    border-bottom-left-radius 0.3s ease, 
+    border-bottom-right-radius 0.5s ease, 
+    height 0.5s ease,
+    background-color 0.3s ease 0.5s; /* Delay added here for background color transition */
+}
+
+.skill-box.selected {
+  border-bottom-left-radius: var(--border-radius-clicked);
+  border-bottom-right-radius: var(--border-radius-clicked);
+  transition: 
+    border-bottom-left-radius 0.3s ease 0.5s, /* 0.2s delay added here */
+    border-bottom-right-radius 0.5s ease 0.5s, /* 0.2s delay added here */
+    height 0.5s ease; /* Ensure this does not have a delay if not needed */
+  height: 105%;
+  background-color: var(--selected-color); /* Set the background color for the selected tab */
+  animation: growFromTopDown 0.5s ease;
+}
+
+@keyframes growFromTopDown {
+  0% {
+    height: 0; /* Start with height of 0 */
+  }
+  100% {
+    height: 100%; /* Expand to full height */
+  }
+}
+
+.skill-description {
+  width: auto; /* Ensure description takes up 100% of its parent */
+  overflow: hidden; /* Hide overflow */
+  border-bottom-left-radius: var(--border-radius-unclicked);
+  border-bottom-right-radius: var(--border-radius-unclicked);
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+}
+
+.skills-category-header {
+  display: flex;
+  align-items: center; /* Center vertically */
+  margin-bottom: 1rem;
+}
+
+.skills-category-header .icon {
+  margin-right: 0.5rem; /* Add space between icon and text */
+}
+
+.logo {
+  margin-top: 0.25rem;
+}
+
+.custom-list {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0; /* Remove default padding */
+  font-family: 'Onest', sans-serif;
+  font-weight: 400; /* Adjust the weight if necessary */
+  font-size: 0.85rem;
+}
+
+.custom-list li {
+  position: relative; /* Required for positioning the icon */
+  padding-left: 30px; /* Adjust based on icon size */
+  margin-bottom: 10px; /* Adjust spacing between list items */
+}
+
+.custom-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px; /* Adjust based on icon size */
+  height: 20px; /* Adjust based on icon size */
+  background: url('../../../../assets/images/checkIcon.png') no-repeat center center;
+  background-size: contain;
+}
+
+.title-icon {
+  width: 1.5rem; /* Adjust size as needed */
+  height: auto;
+  margin-right: 10px; /* Adjust space between icon and text */
+}
+
+.icon-text-container {
+  display: flex;
+  align-items: center; /* Vertically center the items */
+  justify-content: center; /* Horizontally center the items */
+}
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap; /* Allow badges to wrap to the next line if they don't fit */
+  justify-content: center; /* Center the badges horizontally */
+  margin-top: 10px; /* Add some space between the badges and other content */
+}
+
+.badge {
+  background-color: #ffffff; /* Change this color to your desired background color */
+  color: black; /* Change the text color if needed */
+  padding: 5px 10px; /* Adjust padding for badges */
+  margin: 5px; /* Add space between badges */
+  border-radius: 12px; /* Add rounded corners */
+  display: inline-block; /* Ensure badges are inline-block elements */
+  font-family: 'Onest', sans-serif;
+  padding: 0.5rem 1rem;
+}
+
+.software-logos {
+  margin-left: 1.8rem;
+}
+
+.logo-electrical {
+  height: 7rem; /* Adjust the size as needed */
+  width: auto;
   margin: 1rem; /* Adjust the spacing between logos */
 }
+
+.logo-language {
+  height: 4rem; /* Adjust the size as needed */
+  width: auto;
+  margin: 1rem; /* Adjust the spacing between logos */
+}
+
 .logo-framework {
   height: 4rem; /* Adjust the size as needed */
   width: auto;
   margin: 1rem; /* Adjust the spacing between logos */
 }
+
+.custom-padding {
+  padding: 2rem 3rem; /* Default padding */
+}
+
+@media (max-width: 768px) {
+  .skills-subtitle-container {
+    width: 80%; /* Make subtitle container wider on smaller screens */
+  }
+
+  .logo-electrical {
+    height: 4rem; /* Adjust size for smaller screens */
+    margin: 0.5rem; /* Adjust spacing for smaller screens */
+  }
+  .logo-language {
+    height: 3rem; /* Adjust the size as needed */
+    margin: 0.5rem; /* Adjust the spacing between logos */
+  }
+  .logo-framework {
+    height: 3rem; /* Adjust the size as needed */
+    margin: 0.5rem; /* Adjust the spacing between logos */
+  }
+
+  .skill-description {
+    padding: 0.5rem 1rem; /* Decrease padding for smaller screens */
+  }
+
+  .custom-padding {
+    padding: 1rem 1.5rem; /* Decrease padding for smaller screens */
+  }
+
+  .custom-list li {
+    padding-left: 20px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-subtitle-container {
+    width: 90%; /* Make subtitle container wider on very small screens */
+  }
+
+  .logo-electrical {
+    height: 3rem; /* Adjust size for very small screens */
+    margin: 0.5rem; /* Adjust spacing for very small screens */
+  }
+  .logo-language {
+    height: 2.5rem; /* Adjust the size as needed */
+    margin: 0.5rem; /* Adjust the spacing between logos */
+  }
+  .logo-framework {
+    height: 2.5rem; /* Adjust the size as needed */
+    margin: 0.5rem; /* Adjust the spacing between logos */
+  }
+
+  .skill-description {
+    padding: 0.25rem 0.5rem; /* Decrease padding further for very small screens */
+  }
+
+  .custom-padding {
+    padding: 0rem 1rem; /* Decrease padding further for very small screens */
+  }
+
+  .custom-list li {
+    padding-left: 15px; /* Adjust padding for very small screens */
+  }
+}
+
+
+  .logo-electrical {
+    height: 4rem; /* Adjust size for very small screens */
+    margin: 0.5rem; /* Adjust spacing for very small screens */
+  }
+  .logo-language {
+    height: 4rem; /* Adjust the size as needed */
+    margin: 1rem; /* Adjust the spacing between logos */
+  }
+  .logo-framework {
+    height: 4rem; /* Adjust the size as needed */
+    width: auto;
+    margin: 1rem; /* Adjust the spacing between logos */
+  }
+
+  .skill-description {
+    padding: 0.5rem; /* Adjust padding for very small screens */
+  }
+
+  .custom-list li {
+    padding-left: 15px; /* Adjust padding for very small screens */
+  }
 }

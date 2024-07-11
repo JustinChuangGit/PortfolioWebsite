@@ -49,7 +49,7 @@ const Software = () => {
       }}
       style={{ backgroundColor: software_background }}
     >
-        <div className='p-5 col-12 text-start'>
+        <div className='custom-padding col-12 text-start'>
             <p>I began my journey into programming during my first year of undergrad, where I was introduced to Java. My interest in software took a significant leap during my first internship, which required me to program an Arduino for a data collection device I was developing. This experience led me to delve into embedded programming, exploring peripherals, memory management, and more, using C/C++ on embedded devices.</p>
             <p>Eager to expand my software skills, I undertook a challenging project at work to develop a web app for processing accelerometer data. I taught myself web app development, focusing on integrating a backend system with an engaging user interface. This newfound knowledge paved the way for me to explore mobile app development.</p>
             <p>Throughout my university career, I extensively used MATLAB for a variety of data processing and visualization tasks. My projects ranged from implementing particle filters and Extended Kalman Filter SLAM algorithms to conducting sophisticated audio and image processing. Each challenge not only sharpened my technical skills but also deepened my passion for software engineering.</p>
