@@ -41,29 +41,33 @@ const MediaSlider = ({ folder }) => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    arrows: true, // Ensure arrows are visible
   };
 
   return (
-    <Slider {...settings}>
-      {mediaUrls.map((url, index) => {
-        const extension = getFileExtension(url);
-        return (
-          <div key={index} className="media-container">
-            {['jpeg', 'jpg', 'gif', 'png', 'bmp', 'svg'].includes(extension) ? (
-              <img src={url} alt={`media-${index}`} className="media-item" />
-            ) : ['mp4', 'webm', 'ogv'].includes(extension) ? (
-              <video controls className="media-item">
-                <source src={url} type={`video/${extension}`} />
-                Your browser does not support the video tag.
-              </video>
-            ) : (
-              <p>Unsupported file type: {url}</p>
-            )}
-          </div>
-        );
-      })}
-    </Slider>
+    <div className="media-slider">
+      <Slider {...settings}>
+        {mediaUrls.map((url, index) => {
+          const extension = getFileExtension(url);
+          console.log(`Rendering media item: ${url}, extension: ${extension}`); // Debug log
+          return (
+            <div key={index} className="media-container">
+              {['jpeg', 'jpg', 'gif', 'png', 'bmp', 'svg'].includes(extension) ? (
+                <img src={url} alt={`media-${index}`} className="media-item" />
+              ) : ['mp4', 'webm', 'ogv'].includes(extension) ? (
+                <video controls className="media-item">
+                  <source src={url} type={`video/${extension}`} />
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <p>Unsupported file type: {url}</p>
+              )}
+            </div>
+          );
+        })}
+      </Slider>
+    </div>
   );
 };
 
