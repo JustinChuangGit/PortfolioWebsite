@@ -110,6 +110,13 @@
   height: 40rem;
 }
 
+/* Media query to adjust the height of project-card-large on small screens */
+@media (max-width: 47.9375rem) { /* 767px equivalent */
+  .project-card-large {
+    height: 30rem; /* Match the height of project-card on small screens */
+  }
+}
+
 .card-description {
   display: -webkit-box;
   -webkit-line-clamp: 5; /* Number of lines to show */

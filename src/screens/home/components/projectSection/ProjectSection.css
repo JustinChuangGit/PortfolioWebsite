@@ -1,74 +1,89 @@
 /* ProjectSection.css */
 .project-card-wrapper {
-    padding-bottom: 0rem; /* Adjust as needed */
-    height: 35rem;
+  padding-bottom: 0rem; /* Adjust as needed */
+  height: 35rem;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .project-card-wrapper {
-        padding: 1rem 0.5rem; /* Adjust as needed for medium screens */
-    }
+  .project-card-wrapper {
+      padding: 1rem 0.5rem; /* Adjust as needed for medium screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .project-card-wrapper {
+      height: auto; /* Let height adjust based on content for small screens */
+      margin-bottom: 1rem;
+  }
+
+  .col-lg-6, 
+  .col-md-12, 
+  .col-lg-4, 
+  .col-md-6, 
+  .col-sm-12 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
 }
 
 .container {
-    max-width: 1200px;
+  max-width: 1200px;
 }
 
 .row {
-    margin-left: 0;
-    margin-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .card-img-ratio {
-    width: 100%;
-    height: 0;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
-    position: relative;
-    overflow: hidden;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  position: relative;
+  overflow: hidden;
 }
 
 .card-img-ratio img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the entire area */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire area */
 }
 
 .badge {
-    cursor: pointer;
-    margin: 0.2rem;
-  }
+  cursor: pointer;
+  margin: 0.2rem;
+}
 
+.badge-unselected {
+  background-color: #1A1A1A !important;
+  color: white !important;
+}
 
-  .badge-unselected {
-    background-color: #1A1A1A !important;
-    color: white !important;
-  }
-  
-  .badge-selected {
-    background-color: white !important;
-    color: #1A1A1A !important;
-    border: 1px solid #007bff !important;
-  }
+.badge-selected {
+  background-color: white !important;
+  color: #1A1A1A !important;
+  border: 1px solid #007bff !important;
+}
 
-  .input-group {
-    max-width: 500px;
-    width: 100%;
-  }
+.input-group {
+  max-width: 500px;
+  width: 100%;
+}
 
-  .projectSection-subtitle{
-    color:#B0B0B0;
-    width: 60%;
-  }
+.projectSection-subtitle {
+  color: #B0B0B0;
+  width: 60%;
+}
 
-.more-button{
+.more-button {
   background-color: #B0B0B0;
   color: #1A1A1A;
 }
 
-.all-button{
+.all-button {
   background-color: #1A1A1A;
   color: #B0B0B0;
 }
