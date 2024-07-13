@@ -1,53 +1,57 @@
 :root {
     --border-radius-unclicked: 20px;
     --border-radius-clicked: 0px;
+    --default-color: #1a1a1a;
+    --selected-color: #4a4a4a; /* Example color for selected tab */
 }
 
-.skills-title{
+.skills-title {
   font-weight: 700;
   font-size: 3rem;
 }
 
-.skills-subtitle{
-  color:#B0B0B0;
-  font-size: 1rem;;
-
+.skills-subtitle {
+  color: #B0B0B0;
+  font-size: 1rem;
 }
 
-.skills-subtitle-container{
+.skills-subtitle-container {
   margin: 0 auto;
   margin-top: 1rem;
   margin-bottom: 1rem;
   width: 60%;
 }
-  
-.skill-box {
-    cursor: 'pointer';
-    /* transition: border-bottom-left-radius 0.3s ease, border-bottom-right-radius 0.5s ease, height 0.5s ease; Add transition for height */
-    border-top-Right-Radius: var(--border-radius-unclicked);
-    border-top-left-radius: var(--border-radius-unclicked);
-    width: 100%; /* Ensure the skill box takes up 100% of its parent */
-    
 
+.skill-box {
+  cursor: pointer;
+  border-top-right-radius: var(--border-radius-unclicked);
+  border-top-left-radius: var(--border-radius-unclicked);
+  width: 100%;
+  background-color: var(--default-color); /* Set the default background color */
+  transition: background-color 0.3s ease; /* Add transition for background color */
 }
 
 .skill-box.not-selected {
-    border-bottom-left-radius: var(--border-radius-unclicked);
-    border-bottom-right-radius: var(--border-radius-unclicked);
-    transition: border-bottom-left-radius 0.3s ease, border-bottom-right-radius 0.5s ease, 0.5s;
-  }
+  border-bottom-left-radius: var(--border-radius-unclicked);
+  border-bottom-right-radius: var(--border-radius-unclicked);
+  transition: 
+    border-bottom-left-radius 0.3s ease, 
+    border-bottom-right-radius 0.5s ease, 
+    height 0.5s ease,
+    background-color 0.3s ease 0.5s; /* Delay added here for background color transition */
+}
 
-  .skill-box.selected {
-    border-bottom-left-radius: var(--border-radius-clicked);
-    border-bottom-right-radius: var(--border-radius-clicked);
-    transition: 
-      border-bottom-left-radius 0.3s ease 0.5s, /* 0.2s delay added here */
-      border-bottom-right-radius 0.5s ease 0.5s, /* 0.2s delay added here */
-      height 0.5s ease; /* Ensure this does not have a delay if not needed */
-    height: 105%;
-    animation: growFromTopDown 0.5s ease;
-  }
-  
+.skill-box.selected {
+  border-bottom-left-radius: var(--border-radius-clicked);
+  border-bottom-right-radius: var(--border-radius-clicked);
+  transition: 
+    border-bottom-left-radius 0.3s ease 0.5s, /* 0.2s delay added here */
+    border-bottom-right-radius 0.5s ease 0.5s, /* 0.2s delay added here */
+    height 0.5s ease; /* Ensure this does not have a delay if not needed */
+  height: 105%;
+  background-color: var(--selected-color); /* Set the background color for the selected tab */
+  animation: growFromTopDown 0.5s ease;
+}
 
 @keyframes growFromTopDown {
   0% {
@@ -77,7 +81,7 @@
   margin-right: 0.5rem; /* Add space between icon and text */
 }
 
-.logo{
+.logo {
   margin-top: 0.25rem;
 }
 
@@ -86,7 +90,7 @@
   padding-left: 0; /* Remove default padding */
   font-family: 'Onest', sans-serif;
   font-weight: 400; /* Adjust the weight if necessary */
-  font-size:0.85rem;
+  font-size: 0.85rem;
 }
 
 .custom-list li {
@@ -107,11 +111,12 @@
   background-size: contain;
 }
 
-.title-icon{
+.title-icon {
   width: 1.5rem; /* Adjust size as needed */
   height: auto;
   margin-right: 10px; /* Adjust space between icon and text */
 }
+
 .icon-text-container {
   display: flex;
   align-items: center; /* Vertically center the items */
@@ -136,7 +141,7 @@
   padding: 0.5rem 1rem;
 }
 
-.software-logos{
+.software-logos {
   margin-left: 1.8rem;
 }
 
@@ -158,35 +163,68 @@
   margin: 1rem; /* Adjust the spacing between logos */
 }
 
+.custom-padding {
+  padding: 2rem 3rem; /* Default padding */
+}
+
 @media (max-width: 768px) {
+  .skills-subtitle-container {
+    width: 80%; /* Make subtitle container wider on smaller screens */
+  }
+
   .logo-electrical {
-    height: 5rem; /* Adjust size for smaller screens */
+    height: 4rem; /* Adjust size for smaller screens */
     margin: 0.5rem; /* Adjust spacing for smaller screens */
   }
   .logo-language {
-    height: 5rem; /* Adjust the size as needed */
-    margin: 1rem; /* Adjust the spacing between logos */
+    height: 3rem; /* Adjust the size as needed */
+    margin: 0.5rem; /* Adjust the spacing between logos */
   }
   .logo-framework {
-    height: 4rem; /* Adjust the size as needed */
-    width: auto;
-    margin: 1rem; /* Adjust the spacing between logos */
+    height: 3rem; /* Adjust the size as needed */
+    margin: 0.5rem; /* Adjust the spacing between logos */
+  }
+
+  .skill-description {
+    padding: 0.5rem 1rem; /* Decrease padding for smaller screens */
+  }
+
+  .custom-padding {
+    padding: 1rem 1.5rem; /* Decrease padding for smaller screens */
+  }
+
+  .custom-list li {
+    padding-left: 20px; /* Adjust padding for smaller screens */
   }
 }
 
 @media (max-width: 480px) {
+  .skills-subtitle-container {
+    width: 90%; /* Make subtitle container wider on very small screens */
+  }
+
   .logo-electrical {
-    height: 4rem; /* Adjust size for very small screens */
+    height: 3rem; /* Adjust size for very small screens */
     margin: 0.5rem; /* Adjust spacing for very small screens */
   }
   .logo-language {
-    height: 4rem; /* Adjust the size as needed */
-    margin: 1rem; /* Adjust the spacing between logos */
+    height: 2.5rem; /* Adjust the size as needed */
+    margin: 0.5rem; /* Adjust the spacing between logos */
   }
   .logo-framework {
-    height: 4rem; /* Adjust the size as needed */
-    width: auto;
-    margin: 1rem; /* Adjust the spacing between logos */
+    height: 2.5rem; /* Adjust the size as needed */
+    margin: 0.5rem; /* Adjust the spacing between logos */
+  }
+
+  .skill-description {
+    padding: 0.25rem 0.5rem; /* Decrease padding further for very small screens */
+  }
+
+  .custom-padding {
+    padding: 0.5rem 1rem; /* Decrease padding further for very small screens */
+  }
+
+  .custom-list li {
+    padding-left: 15px; /* Adjust padding for very small screens */
   }
 }
-
