@@ -27,6 +27,7 @@
     border-top: 2px solid #fff;
     margin: 0; /* Remove default margin */
     z-index: 0;
+<<<<<<< Updated upstream
 }
 
 .flex-container {
@@ -60,3 +61,8 @@
         height: 300px; /* Adjust the height as needed */
     }
 }
+=======
+  }
+  
+  
+>>>>>>> Stashed changes

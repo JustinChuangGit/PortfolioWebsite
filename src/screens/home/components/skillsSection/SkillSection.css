@@ -1,4 +1,5 @@
 :root {
+<<<<<<< Updated upstream
   --border-radius-unclicked: 20px;
   --border-radius-clicked: 0px;
   --default-color: #4a4a4a;
@@ -52,6 +53,57 @@ height: 105%;
 background-color: var(--selected-color); /* Set the background color for the selected tab */
 animation: growFromTopDown 0.5s ease;
 }
+=======
+    --border-radius-unclicked: 20px;
+    --border-radius-clicked: 0px;
+}
+
+.skills-title{
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.skills-subtitle{
+  color:#B0B0B0;
+  font-size: 1rem;;
+
+}
+
+.skills-subtitle-container{
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 60%;
+}
+
+.skill-box {
+    cursor: 'pointer';
+    /* transition: border-bottom-left-radius 0.3s ease, border-bottom-right-radius 0.5s ease, height 0.5s ease; Add transition for height */
+    border-top-Right-Radius: var(--border-radius-unclicked);
+    border-top-left-radius: var(--border-radius-unclicked);
+    width: 100%; /* Ensure the skill box takes up 100% of its parent */
+    
+
+}
+
+.skill-box.not-selected {
+    border-bottom-left-radius: var(--border-radius-unclicked);
+    border-bottom-right-radius: var(--border-radius-unclicked);
+    transition: border-bottom-left-radius 0.3s ease, border-bottom-right-radius 0.5s ease, 0.5s;
+  }
+
+  .skill-box.selected {
+    border-bottom-left-radius: var(--border-radius-clicked);
+    border-bottom-right-radius: var(--border-radius-clicked);
+    transition: 
+      border-bottom-left-radius 0.3s ease 0.5s, /* 0.2s delay added here */
+      border-bottom-right-radius 0.5s ease 0.5s, /* 0.2s delay added here */
+      height 0.5s ease; /* Ensure this does not have a delay if not needed */
+    height: 105%;
+    animation: growFromTopDown 0.5s ease;
+  }
+  
+>>>>>>> Stashed changes
 
 @keyframes growFromTopDown {
 0% {
@@ -81,6 +133,7 @@ margin-bottom: 1rem;
 margin-right: 0.5rem; /* Add space between icon and text */
 }
 
+<<<<<<< Updated upstream
 .logo {
 margin-top: 0.25rem;
 }
@@ -91,6 +144,18 @@ padding-left: 0; /* Remove default padding */
 font-family: 'Onest', sans-serif;
 font-weight: 400; /* Adjust the weight if necessary */
 font-size: 0.85rem;
+=======
+.logo{
+  margin-top: 0.25rem;
+}
+
+.custom-list {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0; /* Remove default padding */
+  font-family: 'Onest', sans-serif;
+  font-weight: 400; /* Adjust the weight if necessary */
+  font-size:0.85rem;
+>>>>>>> Stashed changes
 }
 
 .custom-list li {
@@ -111,10 +176,17 @@ background: url('../../../../assets/images/checkIcon.png') no-repeat center cent
 background-size: contain;
 }
 
+<<<<<<< Updated upstream
 .title-icon {
 width: 1.5rem; /* Adjust size as needed */
 height: auto;
 margin-right: 10px; /* Adjust space between icon and text */
+=======
+.title-icon{
+  width: 1.5rem; /* Adjust size as needed */
+  height: auto;
+  margin-right: 10px; /* Adjust space between icon and text */
+>>>>>>> Stashed changes
 }
 
 .icon-text-container {
@@ -141,8 +213,13 @@ font-family: 'Onest', sans-serif;
 padding: 0.5rem 1rem;
 }
 
+<<<<<<< Updated upstream
 .software-logos {
 margin-left: 1.8rem;
+=======
+.software-logos{
+  margin-left: 1.8rem;
+>>>>>>> Stashed changes
 }
 
 .logo-electrical {
@@ -161,6 +238,7 @@ margin: 1rem; /* Adjust the spacing between logos */
 height: 3.2rem; /* Adjust the size as needed */
 width: auto;
 margin: 1rem; /* Adjust the spacing between logos */
+<<<<<<< Updated upstream
 }
 
 .custom-padding {
@@ -228,4 +306,39 @@ padding: 2rem 3rem; /* Default padding */
   padding-left: 15px; /* Adjust padding for very small screens */
 }
 
+=======
 }
+
+@media (max-width: 768px) {
+  .logo-electrical {
+    height: 5rem; /* Adjust size for smaller screens */
+    margin: 0.5rem; /* Adjust spacing for smaller screens */
+  }
+  .logo-language {
+    height: 5rem; /* Adjust the size as needed */
+    margin: 1rem; /* Adjust the spacing between logos */
+  }
+  .logo-framework {
+    height: 4rem; /* Adjust the size as needed */
+    width: auto;
+    margin: 1rem; /* Adjust the spacing between logos */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-electrical {
+    height: 4rem; /* Adjust size for very small screens */
+    margin: 0.5rem; /* Adjust spacing for very small screens */
+  }
+  .logo-language {
+    height: 4rem; /* Adjust the size as needed */
+    margin: 1rem; /* Adjust the spacing between logos */
+  }
+  .logo-framework {
+    height: 4rem; /* Adjust the size as needed */
+    width: auto;
+    margin: 1rem; /* Adjust the spacing between logos */
+  }
+>>>>>>> Stashed changes
+}
+
