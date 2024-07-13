@@ -1,89 +1,79 @@
-/* ProjectSection.css */
-.project-card-wrapper {
-  padding-bottom: 0rem; /* Adjust as needed */
-  height: 35rem;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .project-card-wrapper {
-      padding: 1rem 0.5rem; /* Adjust as needed for medium screens */
-  }
-}
-
-@media (max-width: 576px) {
-  .project-card-wrapper {
-      height: auto; /* Let height adjust based on content for small screens */
-      margin-bottom: 1rem;
-  }
-
-  .col-lg-6, 
-  .col-md-12, 
-  .col-lg-4, 
-  .col-md-6, 
-  .col-sm-12 {
-      flex: 0 0 100%;
-      max-width: 100%;
-  }
-}
-
-.container {
-  max-width: 1200px;
-}
-
-.row {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.card-img-ratio {
-  width: 100%;
-  height: 0;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-  position: relative;
-  overflow: hidden;
-}
-
-.card-img-ratio img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure the image covers the entire area */
-}
-
-.badge {
-  cursor: pointer;
-  margin: 0.2rem;
-}
-
-.badge-unselected {
-  background-color: #1A1A1A !important;
-  color: white !important;
-}
-
-.badge-selected {
-  background-color: white !important;
-  color: #1A1A1A !important;
-  border: 1px solid #007bff !important;
-}
-
-.input-group {
-  max-width: 500px;
+.contact-section {
+  padding: 2em 1em;
   width: 100%;
 }
 
-.projectSection-subtitle {
-  color: #B0B0B0;
-  width: 60%;
+.contact-content {
+  max-width: 60%;
+  margin: 0 auto;
+}
+.email-form{
+  max-width: 60%;
 }
 
-.more-button {
-  background-color: #B0B0B0;
-  color: #1A1A1A;
+.contact-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-.all-button {
+.email-form .form-control {
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.email-button {
   background-color: #1A1A1A;
   color: #B0B0B0;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 1.5rem;
+  }
+
+  .email-form .form-control {
+    font-size: 0.875rem;
+    max-width: 100%;
+  }
+
+  .email-button {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .contact-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 0;
+  }
+
+  .contact-title {
+    font-size: 0.25rem;
+  }
+
+  .email-form .form-control {
+    font-size: 0.75rem;
+  }
+
+  .email-form{
+    max-width: 100%;
+  }
+
+  .email-button {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .contact-content {
+    max-width: 90%;
+    padding: 0.5rem;
+  }
 }
