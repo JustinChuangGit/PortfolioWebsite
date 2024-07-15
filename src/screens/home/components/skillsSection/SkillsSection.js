@@ -56,7 +56,7 @@ const SkillsSection = () => {
         <div className='skills-subtitle-container'>
           <p className="text-center skills-subtitle">With five years of experience in mechanical design, five years in software development, and four years in electrical design, I've honed a diverse skill set that drives my innovative projects!</p>
         </div>
-        <div className="row bg-light">
+        <div className="row">
           {skills.map(skill => (
             <Flipped key={skill.id} flipId={skill.id}>
               <div className="col-sm-12 col-md-4 bg-light">
@@ -73,10 +73,11 @@ const SkillsSection = () => {
               </div>
             </Flipped>
           ))}
+          <div className=''>
         <AnimatePresence>
           {selectedSkillId && skillComponents[selectedSkillId]}
         </AnimatePresence>
-        
+        </div>
         </div>
       </div>
     </Flipper>

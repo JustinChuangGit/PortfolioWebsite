@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Jumbotron.css';
-import ParticlesBackground from './ParticlesBackground';
+import ParticlesBackground from './ParticlesBackground.js';
 
 class Jumbotron extends Component {
   render() {
