@@ -56,10 +56,10 @@ const SkillsSection = () => {
         <div className='skills-subtitle-container'>
           <p className="text-center skills-subtitle">With five years of experience in mechanical design, five years in software development, and four years in electrical design, I've honed a diverse skill set that drives my innovative projects!</p>
         </div>
-        <div className="row">
+        <div className="row bg-light">
           {skills.map(skill => (
             <Flipped key={skill.id} flipId={skill.id}>
-              <div className="col-sm-12 col-md-4">
+              <div className="col-sm-12 col-md-4 bg-light">
                 <div
                   className={`p-3 text-white skill-box mt-3 ${selectedSkillId === skill.id ? 'selected' : 'not-selected'}`}
                   onClick={() => handleSkillClick(skill)}
@@ -73,10 +73,11 @@ const SkillsSection = () => {
               </div>
             </Flipped>
           ))}
-        </div>
         <AnimatePresence>
           {selectedSkillId && skillComponents[selectedSkillId]}
         </AnimatePresence>
+        
+        </div>
       </div>
     </Flipper>
   );
