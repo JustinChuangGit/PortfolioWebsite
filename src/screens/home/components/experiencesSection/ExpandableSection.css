@@ -1,13 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+/* Apply reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+.card, .card-body {
+  border: none;
+  box-shadow: none; /* Ensure no box shadow */
+}
+
 .expandable-section {
   background-color: #000; /* Replace with your preferred background color */
   color: #fff; /* Replace with your preferred text color */
   padding: 15px;
   cursor: pointer;
-  border: none; /* Remove border */
   font-family: 'Montserrat', sans-serif; /* Apply the Montserrat font family */
   text-transform: uppercase;
+  border: none; /* Explicitly set no border */
 }
 
 .expandable-section:hover {
@@ -19,6 +32,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 18px;
+  border: none; /* Explicitly set no border */
 }
 
 .section-title-container {
@@ -26,23 +40,27 @@
   flex-direction: column;
   justify-content: flex-start;
   flex-grow: 1;
+  border: none; /* Explicitly set no border */
 }
 
 .section-title {
   font-size: 24px;
   font-weight: bold;
   margin: 0;
+  border: none; /* Explicitly set no border */
 }
 
 .section-location-years {
   display: flex;
   flex-direction: column;
+  border: none; /* Explicitly set no border */
 }
 
 .section-location {
   font-size: 14px;
   color: #ccc; /* Replace with your preferred color for the location */
   margin: 0;
+  border: none; /* Explicitly set no border */
 }
 
 .section-years-mobile {
@@ -50,20 +68,24 @@
   color: #ccc; /* Replace with your preferred color */
   display: block;
   margin-top: 5px;
+  border: none; /* Explicitly set no border */
 }
 
 .section-years-icon {
   display: flex;
   align-items: center;
+  border: none; /* Explicitly set no border */
 }
 
 .section-years-desktop {
   display: none;
   margin-right: 10px; /* Add some space between the years and the icon */
+  border: none; /* Explicitly set no border */
 }
 
 .material-symbols-outlined {
   font-size: 2rem; /* Adjust the size of the icon here */
+  border: none; /* Explicitly set no border */
 }
 
 .collapse-content {
@@ -72,23 +94,23 @@
   color: #fff; /* Ensure text color is still readable */
   font-family: 'Montserrat', sans-serif; /* Apply the Montserrat font family */
   text-align: start;
-}
-
-.card {
-  border: none; /* Ensure Card has no border */
+  border: none; /* Explicitly set no border */
 }
 
 @media (min-width: 768px) {
   .section-location-years {
     flex-direction: row;
     align-items: center;
+    border: none; /* Explicitly set no border */
   }
 
   .section-years-mobile {
     display: none;
+    border: none; /* Explicitly set no border */
   }
 
   .section-years-desktop {
     display: block;
+    border: none; /* Explicitly set no border */
   }
 }
