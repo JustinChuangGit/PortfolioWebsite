@@ -19,9 +19,9 @@ const SkillsSection = () => {
   };
 
   const initialSkills = [
-    { id: 'mechanical', name: 'Mechanical Engineering', color: '#e74c3c', icon: mechanicalSkillsLogo }, // Example color
-    { id: 'electrical', name: 'Electrical Engineering', color: '#3498db', icon: electricalSkillsLogo }, // Example color
-    { id: 'software', name: 'Software Engineering', color: '#2ecc71', icon: softwareSkillsLogo }, // Example color
+    { id: 'mechanical', name: 'Mechanical Engineering', color: '#e74c3c', icon: mechanicalSkillsLogo },
+    { id: 'electrical', name: 'Electrical Engineering', color: '#3498db', icon: electricalSkillsLogo },
+    { id: 'software', name: 'Software Engineering', color: '#2ecc71', icon: softwareSkillsLogo },
   ];
 
   const [skills, setSkills] = useState(initialSkills);
@@ -38,12 +38,12 @@ const SkillsSection = () => {
 
   const handleSkillClick = (clickedSkill) => {
     if (selectedSkillId === clickedSkill.id) {
-      setSelectedSkillId(null); // Deselect if the same skill is clicked again
+      setSelectedSkillId(null);
     } else {
-      setSelectedSkillId(clickedSkill.id); // Select the new skill
+      setSelectedSkillId(clickedSkill.id);
       if (isMobile) {
         const filteredSkills = skills.filter(skill => skill.id !== clickedSkill.id);
-        filteredSkills.push(clickedSkill); // Move the clicked skill to the end
+        filteredSkills.push(clickedSkill);
         setSkills(filteredSkills);
       }
     }
@@ -56,28 +56,30 @@ const SkillsSection = () => {
         <div className='skills-subtitle-container'>
           <p className="text-center skills-subtitle">With five years of experience in mechanical design, five years in software development, and four years in electrical design, I've honed a diverse skill set that drives my innovative projects!</p>
         </div>
-        <div className="row">
-          {skills.map(skill => (
-            <Flipped key={skill.id} flipId={skill.id}>
-              <div className="col-sm-12 col-md-4 bg-light">
-                <div
-                  className={`p-3 text-white skill-box mt-3 ${selectedSkillId === skill.id ? 'selected' : 'not-selected'}`}
-                  onClick={() => handleSkillClick(skill)}
-                  style={{ backgroundColor: selectedSkillId === skill.id ? skill.color : '#1a1a1a' }} // Change selected color as needed
-                >
-                  <div className="icon-text-container">
-                    <img src={skill.icon} alt="icon" className="title-icon" />
-                    <span>{skill.name}</span>
+        <div className='skills-container'>
+          <div className="row">
+            {skills.map(skill => (
+              <Flipped key={skill.id} flipId={skill.id}>
+                <div className="col-sm-12 col-md-4">
+                  <div
+                    className={`p-3 text-white skill-box mt-3 ${selectedSkillId === skill.id ? 'selected' : 'not-selected'}`}
+                    onClick={() => handleSkillClick(skill)}
+                    style={{ backgroundColor: selectedSkillId === skill.id ? skill.color : '#1a1a1a' }}
+                  >
+                    <div className="icon-text-container">
+                      <img src={skill.icon} alt="icon" className="title-icon" />
+                      <span>{skill.name}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Flipped>
-          ))}
-          <div className=''>
-        <AnimatePresence>
-          {selectedSkillId && skillComponents[selectedSkillId]}
-        </AnimatePresence>
-        </div>
+              </Flipped>
+            ))}
+          </div>
+          <div className='dropdown-container w-100'>
+            <AnimatePresence>
+              {selectedSkillId && skillComponents[selectedSkillId]}
+            </AnimatePresence>
+          </div>
         </div>
       </div>
     </Flipper>
