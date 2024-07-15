@@ -104,7 +104,7 @@ const ProjectSection = () => {
 
     return (
         <div className='container d-flex flex-column align-items-center'>
-            <h1 className='text-center mb-4'>Projects</h1>
+            <h1 className='text-center mb-4 title'>Projects</h1>
             <div className='projectSection-subtitle'>
                 <p className='text-center mb-4'>Below is a showcase of some of the exciting projects I've worked on over the past few years.
 

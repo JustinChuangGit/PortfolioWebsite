@@ -7,7 +7,7 @@ import './ExperiencesSection.css'; // Import the new CSS file
 const ExperiencesSection = () => {
   return (
     <Container>
-      <h1 className='mt-5 mb-5'>Experiences</h1>
+      <h1 className='mt-5 mb-5 title'>Experiences</h1>
       <div className="header-container">
         <h3 className="bordered-header">Educational Experience</h3>
         <hr />
@@ -18,6 +18,7 @@ const ExperiencesSection = () => {
         years="2023 - Current"
       >
         <div className="flex-container">
+          <h5>Relevant Courses: </h5>
           <ul>
             <li>ECE4460 - Real Time & Embedded Systems</li>
             <li>ECE4469 - Applied Control Systems</li>
@@ -32,6 +33,8 @@ const ExperiencesSection = () => {
         years="2019 - 2023"
       >
         <div className="flex-container">
+        <h5>Relevant Courses: </h5>
+
           <ul>
             <li>ECE9039 - Machine Learning</li>
             <li>ECE9047 - Sensor Networks & Embedded Systems</li>
