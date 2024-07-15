@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
+  // Link
 } from 'react-router-dom';
 
 import Home from './screens/home/Home.js';
@@ -37,33 +37,13 @@ emailjs.init({
 
 function App() {
   // State to manage navbar collapse
-  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+  // const [isNavCollapsed, setIsNavCollapsed] = useState(true);
 
-  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+  // const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
   return (
     <Router>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
-          {/* <Link className="navbar-brand" to="/"></Link> MAYBE ADD LATER? */}
-          <button className="navbar-toggler" type="button" onClick={handleNavCollapse}>
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse justify-content-end mx-5`} id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item mr-5">
-                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-              </li>
-              <li className="nav-item mr-5">
-                <Link className="nav-link" to="/experience">Experience</Link>
-              </li>
-              <li className="nav-item mr-5">
-                <Link className="nav-link" to="/contact">Contact</Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/experience" element={<Experience />} />
