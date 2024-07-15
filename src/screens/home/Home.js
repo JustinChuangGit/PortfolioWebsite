@@ -7,6 +7,7 @@ import ProjectSection from './components/projectSection/ProjectSection';
 import ExperiencesSection from './components/experiencesSection/ExperiencesSection';
 import './Home.css';
 import ContactSection from './components/contactSection/ContactSection';
+import Footer from './components/footerSection/Footer';
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
       <ProjectSection />
       <ExperiencesSection />
       <ContactSection />
+      <Footer />
       
     </div>
   );
