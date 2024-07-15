@@ -4,6 +4,7 @@ import './ContactSection.css';
 
 const ContactSection = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -22,6 +23,10 @@ const ContactSection = () => {
     emailjs.sendForm('service_suadlxd', 'template_vgw5h8n', e.target, 'hQlTc-DR44Rw5ebKP')
       .then((result) => {
           console.log(result.text);
+          setShowSuccessMessage(true); // Show the success message on success
+          setTimeout(() => {
+            setShowSuccessMessage(false); // Hide the success message after 3 seconds
+          }, 3000);
       }, (error) => {
           console.log(error.text);
       });
@@ -45,6 +50,11 @@ const ContactSection = () => {
             <textarea name="message" className="form-control" placeholder="Your Message" required style={{ width: '100%' }}></textarea>
           </div>
           <button type="submit" variant="secondary" className="btn btn-secondary email-button mt-3" style={{ width: '60%' }}>Email Me</button>
+          {showSuccessMessage && (
+            <div className="success-message mt-3">
+              Email sent successfully!
+            </div>
+          )}
         </form>
       </div>
     </div>

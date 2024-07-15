@@ -1,86 +1,89 @@
 .contact-section {
-    text-align: center;
-    padding: 2rem;
-    background-color: #1a1a1a; /* Adjust based on your design */
-    color: white;
-  }
-  
-  .contact-content {
-    width: 60%;
-    margin: 4rem auto;
-  }
-  
-  .contact-button {
-    margin-bottom: 2rem;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 2rem;
-  }
-  
-  .contact-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin: 0 0;
-  }
-  
-  .contact-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .arrow {
-    font-size: 2rem;
-    margin: 0 1rem;
-  }
-  
-  .contact-circle {
-    width: 5rem;
-    height: 5rem;
-    background-color: #6a1b9a; /* Adjust based on your design */
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-  }
-  
-  .contact-circle .material-symbols-outlined {
-    font-size: 2rem;
-  }
-  
-  .contact-circle p {
-    font-size: 0.75rem;
-    margin: 0;
-  }
-  
-  .email-button {
-    margin-top: 2rem;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 0.5rem;
-    color: #1a1a1a;
-    background-color: white;
-  }
+  text-align: center;
+  padding: 2rem;
+  background-color: #1a1a1a; /* Adjust based on your design */
+  color: white;
+}
 
-.email-form{
-    font-family: 'Onest', sans-serif;
+.contact-content {
+  width: 60%;
+  margin: 4rem auto;
+}
+
+.contact-button {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 2rem;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0 0;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  font-size: 2rem;
+  margin: 0 1rem;
+}
+
+.contact-circle {
+  width: 5rem;
+  height: 5rem;
+  background-color: #6a1b9a; /* Adjust based on your design */
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.contact-circle .material-symbols-outlined {
+  font-size: 2rem;
+}
+
+.contact-circle p {
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.email-button {
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  color: #1a1a1a;
+  background-color: white;
+}
+
+.email-form {
+  font-family: 'Onest', sans-serif;
   font-weight: 400; /* Adjust the weight if necessary */
-  font-size:0.85rem;
+  font-size: 0.85rem;
   width: 65%;
   margin: auto;
 }
-  
-  .email-form .form-group {
-    margin-bottom: 1rem;
-  }
-  
-  .email-form .form-control {
-    width: 100%;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    border: 1px solid #ccc;
 
-  }
-  
+.email-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.email-form .form-control {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+}
+
+.success-message {
+  color: #28a745; /* Green color to indicate success */
+  font-weight: bold;
+}
