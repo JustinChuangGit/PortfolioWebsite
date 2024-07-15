@@ -87,3 +87,14 @@
   color: #28a745; /* Green color to indicate success */
   font-weight: bold;
 }
+
+
+.badge-unselected {
+  background-color: #2a2a2a !important; /* Blue background for selected tags */
+  color: white !important;
+}
+
+.badge-selected {
+  background-color: #f8f9fa !important; /* Light background for unselected tags */
+  color: black !important;
+}

@@ -7,8 +7,8 @@ import { Badge, FormControl, InputGroup, Button } from 'react-bootstrap';
 
 const ProjectSection = () => {
     const [projects, setProjects] = useState([]);
-    const [uniqueTags, setUniqueTags] = useState([]);
     const [filteredProjects, setFilteredProjects] = useState([]);
+    const [availableTags, setAvailableTags] = useState([]);
     const [selectedTags, setSelectedTags] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
     const [visibleProjects, setVisibleProjects] = useState(3);
@@ -38,7 +38,7 @@ const ProjectSection = () => {
 
                 // Collect all unique tags
                 const tags = projectList.flatMap(project => project.Tags || []);
-                setUniqueTags([...new Set(tags)]);
+                setAvailableTags([...new Set(tags)]);
             } catch (error) {
                 console.error("Error fetching projects:", error);
             }
@@ -92,6 +92,10 @@ const ProjectSection = () => {
         }
 
         setFilteredProjects(filtered);
+
+        // Update available tags based on filtered projects
+        const newAvailableTags = filtered.flatMap(project => project.Tags || []);
+        setAvailableTags([...new Set(newAvailableTags)]);
     };
 
     const handleShowMore = () => {
@@ -107,8 +111,7 @@ const ProjectSection = () => {
             <h1 className='text-center mb-4 title'>Projects</h1>
             <div className='projectSection-subtitle'>
                 <p className='text-center mb-4'>Below is a showcase of some of the exciting projects I've worked on over the past few years.
-
-</p>
+                </p>
             </div>
             <InputGroup className="mb-3">
                 <FormControl
@@ -121,11 +124,12 @@ const ProjectSection = () => {
             </InputGroup>
             <div className="mb-4">
                 <h5 className='mb-3'>Filter by Tags:</h5>
-                {uniqueTags.map((tag, index) => (
+                {availableTags.map((tag, index) => (
                     <Badge
                         key={index}
                         className={`mr-2 ${selectedTags.includes(tag) ? "badge-selected" : "badge-unselected"}`}
                         onClick={() => handleTagClick(tag)}
+                        style={{ cursor: 'pointer' }}
                     >
                         {tag}
                     </Badge>
