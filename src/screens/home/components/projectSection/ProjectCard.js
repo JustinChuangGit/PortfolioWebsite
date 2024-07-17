@@ -3,6 +3,7 @@ import { Modal, Button, Card, Badge } from 'react-bootstrap';
 import Slider from 'react-slick';
 import { getDownloadURL, ref } from 'firebase/storage';
 import { storage } from '../../../../services/firebase';
+import LinkPreview from './LinkPreview'; // Import the custom LinkPreview component
 import './ProjectCard.css';
 
 const ProjectCard = ({ project, index }) => {
@@ -93,7 +94,11 @@ const ProjectCard = ({ project, index }) => {
             {project.Heading && project.Paragraph && project.Heading.map((heading, index) => (
               <div key={index} className='mt-5'>
                 <h5>{heading}</h5>
-                <p>{project.Paragraph[index]}</p>
+                {heading === "Links" ? (
+                  <LinkPreview url={project.Paragraph[index]} />
+                ) : (
+                  <p>{project.Paragraph[index]}</p>
+                )}
               </div>
             ))}
           </div>
