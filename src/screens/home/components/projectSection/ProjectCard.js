@@ -25,13 +25,18 @@ const ProjectCard = ({ project, index }) => {
           const result = await listAll(folderRef);
           const urls = await Promise.all(
             result.items.map(async (itemRef) => {
-              return await getDownloadURL(itemRef);
+              try {
+                const imageUrl = await getDownloadURL(itemRef);
+                return imageUrl;
+              } catch (error) {
+                return null;
+              }
             })
           );
-          setImageUrls(urls);
+          setImageUrls(urls.filter(url => url !== null)); // Filter out null values
         }
       } catch (error) {
-        console.error("Error fetching image URLs:", error);
+        // Handle errors if needed
       }
     };
 
@@ -53,7 +58,7 @@ const ProjectCard = ({ project, index }) => {
     <div>
       <Card className={`project-card d-flex flex-column ${index < 2 ? 'project-card-large' : ''}`} onClick={handleShow}>
         <div className="card-img-ratio">
-          <img src={thumbnailUrl || "https://via.placeholder.com/150"} alt={project.ProjectName} />
+          {thumbnailUrl && <img src={thumbnailUrl} alt={project.ProjectName} />}
         </div>
         <Card.Body className='text-start d-flex flex-column flex-grow-1'>
           <div className='d-flex justify-content-between align-items-center'>
