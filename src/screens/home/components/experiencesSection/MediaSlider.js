@@ -17,17 +17,17 @@ const MediaSlider = ({ folder }) => {
         const urls = await Promise.all(
           result.items.map(async (itemRef) => {
             const url = await getDownloadURL(itemRef);
-            console.log(`Fetched URL: ${url}`); // Debug log
+            // console.log(`Fetched URL: ${url}`); // Debug log
             return url;
           })
         );
         setMediaUrls(urls);
       } catch (error) {
-        console.error("Error fetching media URLs:", error);
+        // console.error("Error fetching media URLs:", error);
       }
     };
 
-    console.log(`Fetching media from folder: ${folder}`); // Debug log
+    // console.log(`Fetching media from folder: ${folder}`); // Debug log
     fetchMediaUrls();
   }, [folder]);
 
