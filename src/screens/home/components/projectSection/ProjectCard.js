@@ -26,9 +26,10 @@ const ProjectCard = ({ project, index }) => {
           const urls = await Promise.all(
             result.items.map(async (itemRef) => {
               try {
-                const imageUrl = await getDownloadURL(itemRef);
-                return imageUrl;
+                const mediaUrl = await getDownloadURL(itemRef);
+                return mediaUrl;
               } catch (error) {
+                console.error("Error fetching media URL:", error);
                 return null;
               }
             })
@@ -36,7 +37,7 @@ const ProjectCard = ({ project, index }) => {
           setImageUrls(urls.filter(url => url !== null)); // Filter out null values
         }
       } catch (error) {
-        // Handle errors if needed
+        console.error("Error fetching image URLs:", error);
       }
     };
 
@@ -52,6 +53,11 @@ const ProjectCard = ({ project, index }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+  };
+
+  const getFileExtension = (url) => {
+    const cleanUrl = url.split('?')[0];
+    return cleanUrl.split('.').pop().toLowerCase();
   };
 
   return (
@@ -85,11 +91,23 @@ const ProjectCard = ({ project, index }) => {
             <div className="slider-container">
               <Slider {...settings}>
                 {imageUrls.length > 0 ? (
-                  imageUrls.map((url, index) => (
-                    <div key={index}>
-                      <img src={url || "https://via.placeholder.com/800x400"} alt={`${project.ProjectName} ${index + 1}`} />
-                    </div>
-                  ))
+                  imageUrls.map((url, index) => {
+                    const extension = getFileExtension(url);
+                    return (
+                      <div key={index} className="media-container">
+                        {['jpeg', 'jpg', 'gif', 'png', 'bmp', 'svg'].includes(extension) ? (
+                          <img src={url} alt={`media-${index}`} className="media-item" />
+                        ) : ['mp4', 'webm', 'ogv'].includes(extension) ? (
+                          <video controls className="media-item">
+                            <source src={url} type={`video/${extension}`} />
+                            Your browser does not support the video tag.
+                          </video>
+                        ) : (
+                          <p>Unsupported file type: {url}</p>
+                        )}
+                      </div>
+                    );
+                  })
                 ) : (
                   <div>
                     <img src="https://via.placeholder.com/800x400" alt="Placeholder" />
