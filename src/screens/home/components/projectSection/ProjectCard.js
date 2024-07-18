@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Button, Card, Badge } from 'react-bootstrap';
 import Slider from 'react-slick';
-import { getDownloadURL, ref } from 'firebase/storage';
+import { getDownloadURL, listAll, ref } from 'firebase/storage';
 import { storage } from '../../../../services/firebase';
 import LinkPreview from './LinkPreview'; // Import the custom LinkPreview component
 import './ProjectCard.css';
@@ -20,11 +20,12 @@ const ProjectCard = ({ project, index }) => {
           setThumbnailUrl(url);
         }
 
-        if (project.Images) {
+        if (project.ImageFolder) {
+          const folderRef = ref(storage, project.ImageFolder);
+          const result = await listAll(folderRef);
           const urls = await Promise.all(
-            project.Images.map(async (imagePath) => {
-              const imageRef = ref(storage, imagePath);
-              return await getDownloadURL(imageRef);
+            result.items.map(async (itemRef) => {
+              return await getDownloadURL(itemRef);
             })
           );
           setImageUrls(urls);
@@ -35,7 +36,7 @@ const ProjectCard = ({ project, index }) => {
     };
 
     fetchImageUrls();
-  }, [project.ThumbnailURL, project.Images]);
+  }, [project.ThumbnailURL, project.ImageFolder]);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
