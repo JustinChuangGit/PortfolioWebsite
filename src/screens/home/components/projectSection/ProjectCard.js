@@ -4,12 +4,14 @@ import Slider from 'react-slick';
 import { getDownloadURL, listAll, ref } from 'firebase/storage';
 import { storage } from '../../../../services/firebase';
 import LinkPreview from './LinkPreview'; // Import the custom LinkPreview component
+import { createPortal } from 'react-dom';
 import './ProjectCard.css';
 
 const ProjectCard = ({ project, index }) => {
   const [show, setShow] = useState(false);
   const [thumbnailUrl, setThumbnailUrl] = useState('');
   const [imageUrls, setImageUrls] = useState([]);
+  const [fullscreenImage, setFullscreenImage] = useState(null);
 
   useEffect(() => {
     const fetchImageUrls = async () => {
@@ -60,6 +62,24 @@ const ProjectCard = ({ project, index }) => {
     return cleanUrl.split('.').pop().toLowerCase();
   };
 
+  const handleImageClick = (url) => {
+    setFullscreenImage(url);
+  };
+
+  const closeFullscreen = () => {
+    setFullscreenImage(null);
+  };
+
+  const fullscreenOverlay = fullscreenImage ? createPortal(
+    <div className="fullscreen-overlay" onClick={closeFullscreen}>
+      <img src={fullscreenImage} alt="Fullscreen" className="fullscreen-image" />
+      <Button variant="secondary" onClick={closeFullscreen} className="fullscreen-close-button">
+        Close
+      </Button>
+    </div>,
+    document.body
+  ) : null;
+
   return (
     <div>
       <Card className={`project-card d-flex flex-column ${index < 2 ? 'project-card-large' : ''}`} onClick={handleShow}>
@@ -96,9 +116,14 @@ const ProjectCard = ({ project, index }) => {
                     return (
                       <div key={index} className="media-container">
                         {['jpeg', 'jpg', 'gif', 'png', 'bmp', 'svg'].includes(extension) ? (
-                          <img src={url} alt={`media-${index}`} className="media-item" />
+                          <img
+                            src={url}
+                            alt={`media-${index}`}
+                            className="media-item"
+                            onClick={() => handleImageClick(url)}
+                          />
                         ) : ['mp4', 'webm', 'ogv'].includes(extension) ? (
-                          <video controls className="media-item">
+                          <video controls className="media-item video">
                             <source src={url} type={`video/${extension}`} />
                             Your browser does not support the video tag.
                           </video>
@@ -133,6 +158,8 @@ const ProjectCard = ({ project, index }) => {
           </Button>
         </Modal.Footer>
       </Modal>
+
+      {fullscreenOverlay}
     </div>
   );
 };
