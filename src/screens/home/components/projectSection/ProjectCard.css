@@ -44,6 +44,10 @@
     max-width: 50rem; /* Set a maximum width for the modal (800px equivalent) */
     margin: auto; /* Center the modal */
   }
+
+  .media-container {
+    min-height: 300px; /* Set a minimum height for larger screens */
+  }
 }
 
 /* Media queries for medium devices */
@@ -53,6 +57,10 @@
     height: 18rem; /* Set a fixed height for the images (400px equivalent) */
     border-radius: 0.5rem; /* Rounded corners for the images */
     object-fit: contain; /* Ensure the entire image fits within the box */
+  }
+
+  .media-container {
+    min-height: 300px; /* Set a minimum height for medium screens */
   }
 }
 
@@ -77,6 +85,10 @@
     height: 13rem; /* Set a fixed height for the images (400px equivalent) */
     border-radius: 0.5rem; /* Rounded corners for the images */
     object-fit: contain; /* Ensure the entire image fits within the box */
+  }
+
+  .media-container {
+    min-height: 200px; /* Set a minimum height for the media container on small devices */
   }
 }
 
@@ -153,7 +165,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: auto; /* Adjusted height */
+  max-height: 100%;
 }
 
 .media-item {
@@ -190,5 +203,4 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  background-color: #1a1a1a;
 }
